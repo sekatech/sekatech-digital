@@ -89,8 +89,8 @@
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Here you would typically send the form data to a server
-        // For demonstration, we'll just show an alert
+        // Here you would typically send the form data to a server i havent done any backend its for up to
+        // For demonstration, i just showed an alert
         alert('Thank you for your message! We will contact you soon.');
         this.reset();
     });
@@ -108,7 +108,7 @@
         }
     });
 
-    // Initialize the first testimonial as active
+    // Initialize testimonial 
     showSlide(0);
 
     
