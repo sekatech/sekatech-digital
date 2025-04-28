@@ -730,3 +730,43 @@
                 width: 95%;
             }
         }
+         /* Scrolling Text Styles */
+        .scrolling-text-container {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            position: relative;
+            margin-top: 80px; /* Add space below fixed header */
+        }
+        
+        .scrolling-text {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll 30s linear infinite;
+        }
+        
+        .scrolling-text span {
+            display: inline-block;
+            padding: 0 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .scrolling-text i {
+            margin-right: 10px;
+            color: #ffcc00;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        @media (max-width: 768px) {
+            .scrolling-text span {
+                font-size: 14px;
+                padding: 0 15px;
+            }
+        }
+        
