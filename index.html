@@ -3,66 +3,1432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S-Tech Digital Ink | Cameroon Startup | Digital Innovation</title>
-    <meta name="description" content="S-Tech Digital Ink - Cameroon's leading digital innovation startup. We build, innovate, and transform businesses with cutting-edge technology solutions.">
-    <meta name="keywords" content="Cameroon startup, digital solutions, web development, AI, mobile apps, tech innovation, Africa tech, ANTIC, DreamHost">
-    <meta name="author" content="S-Tech Digital Ink">
-    <meta property="og:title" content="S-Tech Digital Ink | Digital Innovation Startup">
-    <meta property="og:description" content="Transforming businesses through innovative digital solutions in Cameroon and beyond.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+    <title>S-Tech Digital Ink | Digitally Rewriting Africa's Future | Cameroon Tech Startup</title>
     
     <!-- SEO Meta Tags -->
-    <link rel="canonical" href="https://stechdigitalink.com">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖋️</text></svg>">
+    <meta name="description" content="S-Tech Digital Ink - Cameroon's premier digital innovation startup. We're digitally rewriting Africa's future through cutting-edge technology solutions, AI integration, and digital transformation.">
+    <meta name="keywords" content="Cameroon tech startup, digital transformation, AI solutions, web development, mobile apps, digital innovation, Africa technology, DreamHost partner, ANTIC certified">
+    <meta name="author" content="S-Tech Digital Ink">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="S-Tech Digital Ink | Digitally Rewriting Africa's Future">
+    <meta property="og:description" content="Leading digital innovation in Cameroon with cutting-edge technology solutions, AI integration, and transformative digital services.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+    <meta property="og:url" content="https://stechdigitalink.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="S-Tech Digital Ink | Cameroon's Digital Innovation Leader">
+    <meta name="twitter:description" content="Transforming businesses through innovative digital solutions in Africa">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "S-Tech Digital Ink",
+        "alternateName": "STDI",
+        "url": "https://stechdigitalink.com",
+        "logo": "https://stechdigitalink.com/logo.png",
+        "description": "Cameroon's leading digital innovation startup specializing in AI solutions, web development, and digital transformation services.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Buea, Cameroon",
+            "addressLocality": "Buea",
+            "addressRegion": "Southwest",
+            "addressCountry": "CM"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+237650990946",
+            "contactType": "Customer Service",
+            "email": "sekaalvin6@gmail.com",
+            "availableLanguage": ["English", "French"]
+        },
+        "sameAs": [
+            "https://twitter.com/stechdigitalink",
+            "https://linkedin.com/company/stechdigitalink",
+            "https://facebook.com/stechdigitalink"
+        ]
+    }
+    </script>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     
     <style>
+        /* ===== CSS VARIABLES ===== */
         :root {
-            --primary: #2563eb;
-            --secondary: #059669;
-            --accent: #7c3aed;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --blue-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            --green-gradient: linear-gradient(135deg, #059669 0%, #10b981 100%);
-            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+            /* Professional Color Palette */
+            --primary-dark: #0a2540;
+            --primary: #1a365d;
+            --primary-light: #2d4a8a;
+            --secondary: #00b4d8;
+            --secondary-light: #90e0ef;
+            --accent: #7b2cbf;
+            --accent-light: #9d4edd;
+            --dark: #0d1b2a;
+            --dark-medium: #1b263b;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #6c757d;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --info: #3498db;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--dark-medium) 100%);
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.25);
+            --shadow-primary: 0 10px 30px rgba(26, 54, 93, 0.3);
+            --shadow-secondary: 0 10px 30px rgba(0, 180, 216, 0.3);
+            
+            /* Fonts */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-secondary: 'Space Grotesk', 'Inter', sans-serif;
             --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 3rem;
+            --space-xl: 5rem;
+            --space-xxl: 8rem;
+            
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-
-        * {
+        
+        /* ===== RESET & BASE STYLES ===== */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         html {
+            font-size: 16px;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
-
+        
         body {
-            font-family: var(--font-main);
+            font-family: var(--font-primary);
             background-color: var(--dark);
             color: var(--light);
+            line-height: 1.7;
             overflow-x: hidden;
-            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
         }
-
-        /* Animations */
-        @keyframes fadeInUp {
+        
+        /* Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(26, 54, 93, 0.1) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(123, 44, 191, 0.05) 0%, transparent 25%),
+                radial-gradient(circle at 50% 80%, rgba(0, 180, 216, 0.05) 0%, transparent 25%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* Selection Color */
+        ::selection {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--dark-medium);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: var(--radius-full);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-light);
+        }
+        
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-secondary);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+        }
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 3rem;
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-size: 2rem;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: var(--space-sm);
+            font-size: 1.125rem;
+            color: var(--light-gray);
+        }
+        
+        .text-gradient {
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .text-accent {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .text-primary {
+            color: var(--secondary);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-small {
+            font-size: 0.875rem;
+            color: var(--medium-gray);
+        }
+        
+        /* ===== LAYOUT ===== */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .section {
+            padding: var(--space-xxl) 0;
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            position: relative;
+        }
+        
+        .section-header h2 {
+            position: relative;
+            display: inline-block;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-secondary);
+            border-radius: var(--radius-full);
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* ===== ANNOUNCEMENT BAR ===== */
+        .announcement-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 0;
+            z-index: 1001;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .announcement-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .announcement-content i {
+            color: var(--secondary-light);
+            font-size: 1rem;
+        }
+        
+        .announcement-scroll {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        /* ===== HEADER ===== */
+        .main-header {
+            position: fixed;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all var(--transition-normal);
+        }
+        
+        .main-header.scrolled {
+            top: 0;
+            background: rgba(13, 27, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) var(--space-md);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            text-decoration: none;
+            z-index: 1002;
+        }
+        
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-secondary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .logo:hover .logo-icon::after {
+            animation: shine 1.5s ease;
+        }
+        
+        @keyframes shine {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+        }
+        
+        .logo-tagline {
+            font-size: 0.8rem;
+            color: var(--secondary-light);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        /* Navigation */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            padding: 8px 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-secondary);
+            border-radius: var(--radius-full);
+            transition: width var(--transition-normal);
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-light);
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-cta .btn {
+            margin-left: var(--space-sm);
+        }
+        
+        /* Mobile Navigation */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1003;
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 32px;
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: var(--radius-full);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            z-index: -1;
+            border-radius: inherit;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-100%);
+            transition: transform var(--transition-normal);
+            z-index: -1;
+        }
+        
+        .btn:hover::after {
+            transform: translateX(0);
+        }
+        
+        .btn-primary {
+            background: var(--gradient-secondary);
+            color: var(--dark);
+            box-shadow: var(--shadow-secondary);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 180, 216, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 180, 216, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .btn-accent {
+            background: var(--gradient-accent);
+            color: white;
+            box-shadow: 0 10px 30px rgba(123, 44, 191, 0.3);
+        }
+        
+        .btn-accent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(123, 44, 191, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--medium-gray);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .btn-sm {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-lg {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 120px;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .hero-bg-gradient {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(26, 54, 93, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(123, 44, 191, 0.2) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            margin-bottom: var(--space-md);
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--light-gray);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        
+        /* Animated Elements */
+        .floating-element {
+            position: absolute;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+        
+        .floating-1 {
+            top: 20%;
+            right: 10%;
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-secondary);
+            border-radius: var(--radius-lg);
+            opacity: 0.1;
+            animation-delay: 0s;
+        }
+        
+        .floating-2 {
+            bottom: 30%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation-delay: 1s;
+        }
+        
+        .floating-3 {
+            top: 40%;
+            left: 15%;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-secondary);
+            border-radius: var(--radius-md);
+            opacity: 0.1;
+            animation-delay: 2s;
+        }
+        
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            background: var(--dark-medium);
+            position: relative;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .about-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform var(--transition-slow);
+        }
+        
+        .about-image:hover .about-img {
+            transform: scale(1.05);
+        }
+        
+        .about-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0.2;
+            mix-blend-mode: overlay;
+        }
+        
+        .about-text h2 {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-secondary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--dark);
+            flex-shrink: 0;
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+            z-index: -1;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: transparent;
+            box-shadow: var(--shadow-primary);
+        }
+        
+        .service-card:hover::before {
+            opacity: 0.1;
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-secondary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-card h3 {
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* ===== TEAM SECTION ===== */
+        .team-section {
+            background: var(--dark-medium);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .team-member {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-normal);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-secondary);
+        }
+        
+        .member-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .team-member:hover .member-image img {
+            transform: scale(1.1);
+        }
+        
+        .member-info {
+            padding: var(--space-lg);
+        }
+        
+        .member-name {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .member-role {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .member-social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+        
+        .social-link:hover {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        /* ===== PROJECTS SECTION ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-normal);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-content {
+            padding: var(--space-lg);
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--space-md);
+        }
+        
+        .project-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--success);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        /* ===== PARTICIPATION SECTION ===== */
+        .participation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .participation-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .participation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-secondary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-normal);
+        }
+        
+        .participation-card:hover {
+            transform: translateY(-10px);
+            border-color: transparent;
+            box-shadow: var(--shadow-secondary);
+        }
+        
+        .participation-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .participation-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--dark);
+            margin: 0 auto var(--space-md);
+        }
+        
+        /* ===== DONATION SECTION ===== */
+        .donation-section {
+            background: var(--gradient-dark);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .donation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path fill="%2300b4d8" opacity="0.05" d="M0,0l1000,0l0,1000l-1000,0l0,-1000z M250,250l500,0l0,500l-500,0l0,-500z"></path></svg>');
+            z-index: -1;
+        }
+        
+        .donation-options {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin: var(--space-lg) 0;
+            flex-wrap: wrap;
+        }
+        
+        .donation-amount {
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid transparent;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .donation-amount:hover,
+        .donation-amount.selected {
+            background: rgba(0, 180, 216, 0.1);
+            border-color: var(--secondary);
+            color: var(--secondary-light);
+        }
+        
+        .donation-form {
+            max-width: 500px;
+            margin: var(--space-lg) auto 0;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--light-gray);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            color: var(--light);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+        }
+        
+        /* ===== PARTNERS SECTION ===== */
+        .partners-section {
+            background: var(--dark-medium);
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .partner-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-normal);
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-secondary);
+        }
+        
+        .partner-logo {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-md);
+        }
+        
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            filter: grayscale(1) brightness(2);
+            transition: filter var(--transition-normal);
+        }
+        
+        .partner-card:hover .partner-logo img {
+            filter: grayscale(0) brightness(1);
+        }
+        
+        .partner-info {
+            margin-top: var(--space-sm);
+        }
+        
+        /* ===== NEWS SECTION ===== */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .news-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-normal);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .news-image {
+            height: 200px;
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-date {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(13, 27, 42, 0.9);
+            color: var(--secondary-light);
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .news-content {
+            padding: var(--space-lg);
+        }
+        
+        .news-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(123, 44, 191, 0.1);
+            color: var(--accent-light);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* ===== NEWSLETTER SECTION ===== */
+        .newsletter-section {
+            background: var(--gradient-primary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path fill="%23ffffff" opacity="0.03" d="M0,500a500,500 0 1,0 1000,0a500,500 0 1,0 -1000,0"></path></svg>');
+            background-size: cover;
+            z-index: 0;
+        }
+        
+        .newsletter-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: var(--space-lg) auto 0;
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-full);
+            color: white;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+        }
+        
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: white;
+        }
+        
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: var(--dark-medium);
+            padding: var(--space-xl) 0 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: var(--space-md);
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--medium-gray);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-light);
+        }
+        
+        .footer-links a i {
+            font-size: 0.8rem;
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .footer-contact i {
+            color: var(--secondary);
+            width: 20px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .footer-bottom {
+            padding: var(--space-lg) 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity var(--transition-slow), transform var(--transition-slow);
+        }
+        
+        .animate-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+        
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+        
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+        
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
+        
+        .delay-5 {
+            transition-delay: 0.5s;
+        }
+        
+        /* Pulse Animation */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(0, 180, 216, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 180, 216, 0);
+            }
+        }
+        
+        /* Rotate Animation */
+        .rotate {
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
             from {
-                opacity: 0;
-                transform: translateY(30px);
+                transform: rotate(0deg);
             }
             to {
-                opacity: 1;
-                transform: translateY(0);
+                transform: rotate(360deg);
             }
         }
-
-        @keyframes float {
+        
+        /* Bounce Animation */
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
             }
@@ -70,689 +1436,852 @@
                 transform: translateY(-10px);
             }
         }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
+        
+        /* Shimmer Animation */
+        .shimmer {
+            background: linear-gradient(90deg, 
+                rgba(255,255,255,0) 0%, 
+                rgba(255,255,255,0.1) 50%, 
+                rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
         }
-
+        
         @keyframes shimmer {
             0% {
-                background-position: -1000px 0;
+                background-position: -200% 0;
             }
             100% {
-                background-position: 1000px 0;
+                background-position: 200% 0;
             }
         }
-
-        /* Preloader */
-        #preloader {
+        
+        /* Glitch Effect */
+        .glitch {
+            position: relative;
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--accent);
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 var(--secondary);
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+        
+        @keyframes glitch-anim {
+            0% { clip: rect(31px, 9999px, 94px, 0); }
+            10% { clip: rect(112px, 9999px, 76px, 0); }
+            20% { clip: rect(85px, 9999px, 77px, 0); }
+            30% { clip: rect(27px, 9999px, 97px, 0); }
+            40% { clip: rect(64px, 9999px, 98px, 0); }
+            50% { clip: rect(61px, 9999px, 85px, 0); }
+            60% { clip: rect(99px, 9999px, 114px, 0); }
+            70% { clip: rect(34px, 9999px, 115px, 0); }
+            80% { clip: rect(98px, 9999px, 129px, 0); }
+            90% { clip: rect(43px, 9999px, 96px, 0); }
+            100% { clip: rect(82px, 9999px, 64px, 0); }
+        }
+        
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 119px, 0); }
+            10% { clip: rect(79px, 9999px, 66px, 0); }
+            20% { clip: rect(93px, 9999px, 105px, 0); }
+            30% { clip: rect(58px, 9999px, 98px, 0); }
+            40% { clip: rect(82px, 9999px, 102px, 0); }
+            50% { clip: rect(33px, 9999px, 67px, 0); }
+            60% { clip: rect(104px, 9999px, 47px, 0); }
+            70% { clip: rect(89px, 9999px, 96px, 0); }
+            80% { clip: rect(37px, 9999px, 117px, 0); }
+            90% { clip: rect(87px, 9999px, 82px, 0); }
+            100% { clip: rect(52px, 9999px, 60px, 0); }
+        }
+        
+        /* ===== MODAL ===== */
+        .modal {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--dark);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        .loader {
-            width: 60px;
-            height: 60px;
-            border: 4px solid transparent;
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(13, 27, 42, 0.95);
             backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--blue-gradient);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 500;
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            padding: 8rem 5% 5rem;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
-            z-index: -1;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: var(--blue-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            padding: 0.75rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: var(--blue-gradient);
-            color: white;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--light);
-            border: 2px solid var(--gray);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* Sections */
-        .section {
-            padding: 6rem 5%;
-            position: relative;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: var(--blue-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Current Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 20px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--blue-gradient);
-        }
-
-        .project-progress {
-            margin-top: 1rem;
-        }
-
-        .progress-bar {
-            height: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: var(--blue-gradient);
-            border-radius: 4px;
-            transition: width 1s ease;
-        }
-
-        /* Participation Section */
-        .participation-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .participation-card {
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .participation-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .participation-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--blue-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-        }
-
-        /* Donation Section */
-        .donation-section {
-            background: rgba(30, 41, 59, 0.3);
-            border-radius: 30px;
-            padding: 4rem;
-            text-align: center;
-        }
-
-        .donation-options {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .donation-amount {
-            padding: 1rem 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .donation-amount:hover,
-        .donation-amount.selected {
-            border-color: var(--primary);
-            background: rgba(37, 99, 235, 0.1);
-        }
-
-        .donation-form {
-            max-width: 500px;
-            margin: 2rem auto;
-            text-align: left;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: var(--light);
-            font-family: var(--font-main);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        /* Payment Modal */
-        .payment-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 2000;
-            backdrop-filter: blur(5px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
         }
-
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
         .modal-content {
-            background: var(--dark);
-            padding: 3rem;
-            border-radius: 20px;
+            background: var(--dark-medium);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
             max-width: 500px;
             width: 90%;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            transform: translateY(20px);
+            transition: transform var(--transition-normal);
         }
-
-        .close-modal {
+        
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+        
+        .modal-close {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 20px;
+            right: 20px;
             background: none;
             border: none;
             color: var(--light);
             font-size: 1.5rem;
             cursor: pointer;
+            transition: color var(--transition-fast);
         }
-
-        /* Partners Section */
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+        
+        .modal-close:hover {
+            color: var(--secondary);
         }
-
-        .partner-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .partner-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-        }
-
-        .partner-logo {
-            height: 60px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* News Section */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .news-card {
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .news-image {
-            height: 200px;
-            background: var(--blue-gradient);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .news-content {
-            padding: 1.5rem;
-        }
-
-        .news-date {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Newsletter */
-        .newsletter-section {
-            background: var(--blue-gradient);
-            border-radius: 30px;
-            padding: 4rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .newsletter-form {
-            max-width: 500px;
-            margin: 2rem auto 0;
-            display: flex;
-            gap: 1rem;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            padding: 1rem;
-            border-radius: 50px;
-            border: none;
-            font-family: var(--font-main);
-        }
-
-        .newsletter-btn {
-            padding: 1rem 2rem;
-            background: var(--dark);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .newsletter-btn:hover {
-            background: #1e293b;
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(15, 23, 42, 0.95);
-            padding: 4rem 5% 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--gray);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            h2 {
                 font-size: 2.5rem;
             }
             
-            .nav-links {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-menu {
                 position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: var(--dark);
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background: var(--dark-medium);
                 flex-direction: column;
-                padding: 2rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: all 0.3s ease;
+                justify-content: center;
+                align-items: center;
+                transition: right var(--transition-normal);
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+                z-index: 1001;
             }
             
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
+            .nav-menu.active {
+                right: 0;
             }
             
-            .hamburger {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-lg);
+            }
+            
+            .mobile-toggle {
                 display: block;
+            }
+            
+            .nav-cta {
+                margin-top: var(--space-lg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+            
+            .section {
+                padding: var(--space-xl) 0;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
             }
             
             .newsletter-form {
                 flex-direction: column;
             }
         }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 var(--space-sm);
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-header h2::after {
+                width: 60px;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+            }
+            
+            .donation-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .donation-amount {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .modal-content {
+                padding: var(--space-lg);
+            }
+        }
+        
+        /* ===== UTILITY CLASSES ===== */
+        .mt-1 { margin-top: var(--space-sm); }
+        .mt-2 { margin-top: var(--space-md); }
+        .mt-3 { margin-top: var(--space-lg); }
+        .mt-4 { margin-top: var(--space-xl); }
+        
+        .mb-1 { margin-bottom: var(--space-sm); }
+        .mb-2 { margin-bottom: var(--space-md); }
+        .mb-3 { margin-bottom: var(--space-lg); }
+        .mb-4 { margin-bottom: var(--space-xl); }
+        
+        .pt-1 { padding-top: var(--space-sm); }
+        .pt-2 { padding-top: var(--space-md); }
+        .pt-3 { padding-top: var(--space-lg); }
+        .pt-4 { padding-top: var(--space-xl); }
+        
+        .pb-1 { padding-bottom: var(--space-sm); }
+        .pb-2 { padding-bottom: var(--space-md); }
+        .pb-3 { padding-bottom: var(--space-lg); }
+        .pb-4 { padding-bottom: var(--space-xl); }
+        
+        .d-flex { display: flex; }
+        .d-grid { display: grid; }
+        .d-block { display: block; }
+        .d-none { display: none; }
+        
+        .align-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .w-100 { width: 100%; }
+        .h-100 { height: 100%; }
+        
+        .rounded { border-radius: var(--radius-md); }
+        .rounded-full { border-radius: var(--radius-full); }
+        
+        .shadow { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .overflow-hidden { overflow: hidden; }
+        .position-relative { position: relative; }
+        .position-absolute { position: absolute; }
+        .position-fixed { position: fixed; }
+        
+        .z-1 { z-index: 1; }
+        .z-2 { z-index: 2; }
+        .z-3 { z-index: 3; }
+        
+        .opacity-0 { opacity: 0; }
+        .opacity-50 { opacity: 0.5; }
+        .opacity-100 { opacity: 1; }
+        
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--secondary);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: var(--dark-medium);
+            border-left: 4px solid var(--success);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            transform: translateX(150%);
+            transition: transform var(--transition-normal);
+            z-index: 1000;
+            max-width: 350px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification.error {
+            border-left-color: var(--danger);
+        }
+        
+        .notification.warning {
+            border-left-color: var(--warning);
+        }
+        
+        .notification.info {
+            border-left-color: var(--info);
+        }
+        
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark);
             color: var(--light);
-            font-size: 1.5rem;
-            cursor: pointer;
+            text-align: center;
+            border-radius: var(--radius-md);
+            padding: 10px;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-md);
         }
-
-        /* Floating elements */
-        .floating-element {
-            animation: float 3s ease-in-out infinite;
+        
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--dark) transparent transparent transparent;
         }
-
-        /* Shimmer effect */
-        .shimmer {
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            background-size: 1000px 100%;
-            animation: shimmer 2s infinite;
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
         }
-
-        /* Back to top */
+        
+        /* Countup Animation */
+        .countup {
+            display: inline-block;
+        }
+        
+        /* Back to Top */
         .back-to-top {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
+            bottom: 30px;
+            right: 30px;
             width: 50px;
             height: 50px;
-            background: var(--blue-gradient);
+            background: var(--gradient-secondary);
+            color: var(--dark);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             text-decoration: none;
             opacity: 0;
             transform: translateY(20px);
-            transition: all 0.3s ease;
+            transition: all var(--transition-normal);
             z-index: 100;
+            box-shadow: var(--shadow-md);
         }
-
-        .back-to-top.visible {
+        
+        .back-to-top.show {
             opacity: 1;
             transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
     </style>
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <i class="fas fa-bullhorn"></i>
+                <div class="announcement-scroll">
+                    🎉 NEW PARTNERSHIP ANNOUNCED: S-Tech Digital Ink partners with DreamHost & ANTIC Cameroon to accelerate digital transformation across Africa • 🌟 Now accepting donations and project participation • 🔥 Digital Literacy Program launching in 3 regions • ⚡ Limited spots available for volunteer program
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Header -->
-    <header>
-        <a href="#" class="logo">
-            <div class="logo-icon">🖋️</div>
-            <span>S-Tech Digital Ink</span>
-        </a>
-        
-        <button class="hamburger">☰</button>
-        
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#participate">Participate</a></li>
-            <li><a href="#donate">Donate</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">ST</div>
+                <div class="logo-text">
+                    <div class="logo-main">S-Tech Digital Ink</div>
+                    <div class="logo-tagline">Digitally Rewriting The Future</div>
+                </div>
+            </a>
+            
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#participate" class="nav-link">Participate</a></li>
+                    <li><a href="#partners" class="nav-link">Partners</a></li>
+                </ul>
+                
+                <div class="nav-cta">
+                    <a href="#donate" class="btn btn-sm btn-primary">Donate Now</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <h1>Innovating Cameroon's Digital Future</h1>
-            <p>S-Tech Digital Ink is pioneering digital transformation in Cameroon. We build cutting-edge solutions, foster innovation, and empower communities through technology.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#participate" class="btn btn-secondary">Join Us</a>
+    <section class="hero-section" id="home">
+        <div class="hero-background">
+            <div class="hero-bg-gradient"></div>
+            <div class="floating-element floating-1"></div>
+            <div class="floating-element floating-2"></div>
+            <div class="floating-element floating-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-in">
+                    Digitally Rewriting <span class="text-gradient">Africa's Future</span>
+                </h1>
+                
+                <p class="hero-subtitle animate-in delay-1">
+                    S-Tech Digital Ink is Cameroon's premier digital innovation startup. We combine cutting-edge technology with local expertise to drive digital transformation across Africa.
+                </p>
+                
+                <div class="hero-buttons animate-in delay-2">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View Projects
+                    </a>
+                    <a href="#participate" class="btn btn-secondary">
+                        <i class="fas fa-handshake"></i> Join Movement
+                    </a>
+                </div>
+                
+                <div class="hero-stats animate-in delay-3">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">People Impacted</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Current Projects -->
-    <section class="section" id="projects">
-        <div class="section-title">
-            <h2>Current Projects</h2>
-            <p>Transforming ideas into reality</p>
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>About S-Tech Digital Ink</h2>
+                <p class="section-subtitle">Pioneering digital transformation in Cameroon and beyond</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image animate-in">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="S-Tech Digital Ink Team" class="about-img">
+                </div>
+                
+                <div class="about-text animate-in delay-1">
+                    <h2>Transforming Africa Through <span class="text-gradient">Digital Innovation</span></h2>
+                    
+                    <p>Founded in 2023, S-Tech Digital Ink emerged from a vision to bridge the digital divide in Africa. Based in Buea, Cameroon, we're at the forefront of the continent's digital revolution.</p>
+                    
+                    <p>Our mission is to empower communities, businesses, and governments through innovative digital solutions that are accessible, scalable, and sustainable.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <h4>Our Vision</h4>
+                                <p>To become Africa's leading digital innovation hub by 2030.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4>Our Mission</h4>
+                                <p>Democratize access to digital tools and knowledge across Africa.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <h4>Our Values</h4>
+                                <p>Innovation, Integrity, Inclusivity, and Impact.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p>Headquartered in Buea, Cameroon with regional presence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Digital Literacy Program</h3>
-                <p>Training 1000+ youths in digital skills across Cameroon</p>
-                <div class="project-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                    <span>75% Complete</span>
-                </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>Our Digital Solutions</h2>
+                <p class="section-subtitle">Comprehensive services to drive your digital transformation</p>
             </div>
             
-            <div class="project-card">
-                <h3>EduTech Platform</h3>
-                <p>Online learning platform for remote education access</p>
-                <div class="project-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 45%"></div>
+            <div class="services-grid">
+                <div class="service-card animate-in">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
                     </div>
-                    <span>45% Complete</span>
+                    <h3>Web Development</h3>
+                    <p>Custom websites, e-commerce platforms, and web applications built with modern technologies for optimal performance and scalability.</p>
+                    <a href="#contact" class="btn btn-sm btn-outline mt-2">Learn More</a>
+                </div>
+                
+                <div class="service-card animate-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Applications</h3>
+                    <p>Native and cross-platform mobile apps for iOS and Android, designed for seamless user experiences and maximum engagement.</p>
+                    <a href="#contact" class="btn btn-sm btn-outline mt-2">Learn More</a>
+                </div>
+                
+                <div class="service-card animate-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Intelligent solutions powered by artificial intelligence to automate processes, gain insights, and drive innovation.</p>
+                    <a href="#contact" class="btn btn-sm btn-outline mt-2">Learn More</a>
+                </div>
+                
+                <div class="service-card animate-in">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Data-driven marketing strategies including SEO, social media, and content marketing to boost your online presence.</p>
+                    <a href="#contact" class="btn btn-sm btn-outline mt-2">Learn More</a>
+                </div>
+                
+                <div class="service-card animate-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Secure, scalable cloud infrastructure and migration services to optimize your operations and reduce costs.</p>
+                    <a href="#contact" class="btn btn-sm btn-outline mt-2">Learn More</a>
+                </div>
+                
+                <div class="service-card animate-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Digital Training</h3>
+                    <p>Comprehensive training programs to build digital skills and empower individuals and organizations.</p>
+                    <a href="#contact" class="btn btn-sm btn-outline mt-2">Learn More</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team-section" id="team">
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>Our Leadership Team</h2>
+                <p class="section-subtitle">The brilliant minds driving our digital revolution</p>
+            </div>
             
-            <div class="project-card">
-                <h3>AgriTech Solution</h3>
-                <p>Mobile app connecting farmers to markets and resources</p>
-                <div class="project-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 30%"></div>
+            <div class="team-grid">
+                <div class="team-member animate-in">
+                    <div class="member-image">
+                        <img src="P2.jpeg" alt="SEKA ALVIN - CEO & Founder">
                     </div>
-                    <span>30% Complete</span>
+                    <div class="member-info">
+                        <h3 class="member-name">SEKA ALVIN</h3>
+                        <p class="member-role">CEO & Founder</p>
+                        <p>Visionary leader with 8+ years in digital innovation. Passionate about transforming Africa through technology.</p>
+                        <div class="member-social">
+                            <a href="https://linkedin.com" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com" class="social-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member animate-in delay-1">
+                    <div class="member-image">
+                        <img src="P4.jpeg" alt="Ange Andrea - Creative Director">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Ange Andrea</h3>
+                        <p class="member-role">Creative Director</p>
+                        <p>Award-winning designer with expertise in UX/UI and brand strategy. Turns complex problems into beautiful solutions.</p>
+                        <div class="member-social">
+                            <a href="https://linkedin.com" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://dribbble.com" class="social-link" target="_blank">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="https://behance.net" class="social-link" target="_blank">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member animate-in delay-2">
+                    <div class="member-image">
+                        <img src="P1.jpeg" alt="Bukuka Felix - Lead Developer">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Bukuka Felix</h3>
+                        <p class="member-role">Lead Developer</p>
+                        <p>Full-stack developer with expertise in modern web technologies. Builds scalable, high-performance applications.</p>
+                        <div class="member-social">
+                            <a href="https://linkedin.com" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com" class="social-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member animate-in delay-3">
+                    <div class="member-image">
+                        <img src="P3.jpeg" alt="Steve Jordan - Marketing Specialist">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Steve Jordan</h3>
+                        <p class="member-role">Marketing Specialist</p>
+                        <p>Digital marketing expert with proven track record in growth hacking and brand development across Africa.</p>
+                        <div class="member-social">
+                            <a href="https://www.linkedin.com/posts/seka-alvin-b565032b5_activity-7351438715614810112-N8pw" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com" class="social-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/seka.alvin237" class="social-link" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>Current Projects</h2>
+                <p class="section-subtitle">Transforming ideas into impactful digital solutions</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card animate-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Digital Literacy Program">
+                    </div>
+                    <div class="project-content">
+                        <h3>Digital Literacy Program</h3>
+                        <p>Training 1000+ youths across Cameroon in essential digital skills including coding, digital marketing, and AI basics.</p>
+                        <div class="project-meta">
+                            <div class="project-status">
+                                <i class="fas fa-circle"></i> In Progress
+                            </div>
+                            <span class="text-small">75% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-in delay-1">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EduTech Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>EduTech Platform</h3>
+                        <p>Online learning platform providing access to quality education in remote areas of Cameroon and neighboring countries.</p>
+                        <div class="project-meta">
+                            <div class="project-status">
+                                <i class="fas fa-circle"></i> In Progress
+                            </div>
+                            <span class="text-small">45% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-in delay-2">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AgriTech Solution">
+                    </div>
+                    <div class="project-content">
+                        <h3>AgriTech Solution</h3>
+                        <p>Mobile application connecting farmers to markets, weather information, and agricultural resources.</p>
+                        <div class="project-meta">
+                            <div class="project-status">
+                                <i class="fas fa-circle"></i> Planning
+                            </div>
+                            <span class="text-small">30% Complete</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -760,430 +2289,1064 @@
 
     <!-- Participation Section -->
     <section class="section" id="participate">
-        <div class="section-title">
-            <h2>Get Involved</h2>
-            <p>Join our mission to transform Cameroon through technology</p>
-        </div>
-        
-        <div class="participation-cards">
-            <div class="participation-card">
-                <div class="participation-icon">👨‍💻</div>
-                <h3>Volunteer</h3>
-                <p>Share your skills and mentor aspiring developers</p>
-                <button class="btn btn-primary" onclick="openParticipationForm('volunteer')">Sign Up</button>
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>Join Our Movement</h2>
+                <p class="section-subtitle">Be part of Africa's digital transformation journey</p>
             </div>
             
-            <div class="participation-card">
-                <div class="participation-icon">🤝</div>
-                <h3>Partner</h3>
-                <p>Collaborate with us on innovative projects</p>
-                <button class="btn btn-primary" onclick="openParticipationForm('partner')">Partner With Us</button>
-            </div>
-            
-            <div class="participation-card">
-                <div class="participation-icon">💡</div>
-                <h3>Innovate</h3>
-                <p>Submit your ideas for our next big project</p>
-                <button class="btn btn-primary" onclick="openParticipationForm('innovate')">Submit Idea</button>
+            <div class="participation-cards">
+                <div class="participation-card animate-in">
+                    <div class="participation-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Share your skills and expertise to mentor the next generation of African digital innovators.</p>
+                    <button class="btn btn-primary mt-2" onclick="openModal('volunteer')">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
+                
+                <div class="participation-card animate-in delay-1">
+                    <div class="participation-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partner With Us</h3>
+                    <p>Collaborate on projects, share resources, and amplify our impact across the continent.</p>
+                    <button class="btn btn-primary mt-2" onclick="openModal('partner')">
+                        <i class="fas fa-briefcase"></i> Partner Now
+                    </button>
+                </div>
+                
+                <div class="participation-card animate-in delay-2">
+                    <div class="participation-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Submit Ideas</h3>
+                    <p>Have an innovative idea? Share it with us and let's build the future together.</p>
+                    <button class="btn btn-primary mt-2" onclick="openModal('idea')">
+                        <i class="fas fa-paper-plane"></i> Submit Idea
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Donation Section -->
     <section class="section" id="donate">
-        <div class="section-title">
-            <h2>Support Our Mission</h2>
-            <p>Your donation helps us innovate and empower communities</p>
-        </div>
-        
-        <div class="donation-section">
-            <h3>Choose Donation Amount</h3>
-            <div class="donation-options">
-                <div class="donation-amount" data-amount="10">$10</div>
-                <div class="donation-amount" data-amount="25">$25</div>
-                <div class="donation-amount selected" data-amount="50">$50</div>
-                <div class="donation-amount" data-amount="100">$100</div>
-                <div class="donation-amount" data-amount="500">$500</div>
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>Support Our Mission</h2>
+                <p class="section-subtitle">Your contribution helps us rewrite Africa's digital future</p>
             </div>
             
-            <form class="donation-form" id="donationForm">
-                <div class="form-group">
-                    <label>Custom Amount ($)</label>
-                    <input type="number" class="form-control" id="customAmount" min="1" placeholder="Enter amount">
+            <div class="donation-section animate-in">
+                <h3 class="text-center mb-3">Make a Donation</h3>
+                <p class="text-center mb-4">Choose an amount or enter a custom donation. Every contribution makes a difference.</p>
+                
+                <div class="donation-options">
+                    <div class="donation-amount" data-amount="10">$10</div>
+                    <div class="donation-amount" data-amount="25">$25</div>
+                    <div class="donation-amount selected" data-amount="50">$50</div>
+                    <div class="donation-amount" data-amount="100">$100</div>
+                    <div class="donation-amount" data-amount="500">$500</div>
                 </div>
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" class="form-control" required placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" class="form-control" required placeholder="john@example.com">
-                </div>
-                <button type="button" class="btn btn-primary" onclick="processDonation()" style="width: 100%;">
-                    Donate Now <span id="donationAmount">$50</span>
-                </button>
-            </form>
+                
+                <form class="donation-form" id="donationForm">
+                    <div class="form-group">
+                        <label class="form-label">Custom Amount (USD)</label>
+                        <input type="number" class="form-control" id="customAmount" min="1" placeholder="Enter custom amount">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required placeholder="Doe">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="donorEmail" required placeholder="john@example.com">
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary btn-lg w-100" onclick="processDonation()">
+                        <i class="fas fa-heart"></i> Donate <span id="donationAmountDisplay">$50</span>
+                    </button>
+                    
+                    <p class="text-center mt-3 text-small">
+                        <i class="fas fa-lock"></i> Secure payment processed via Stripe
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Partners Section -->
-    <section class="section" id="partners">
-        <div class="section-title">
-            <h2>Global Partners</h2>
-            <p>Collaborating for digital transformation</p>
-        </div>
-        
-        <div class="partners-grid">
-            <div class="partner-card">
-                <div class="partner-logo">🌐</div>
-                <h3>DreamHost</h3>
-                <p>Web Infrastructure Partner</p>
-                <p class="news-date">Partner since 2023</p>
+    <section class="section partners-section" id="partners">
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>Global Partners</h2>
+                <p class="section-subtitle">Collaborating with industry leaders to drive digital innovation</p>
             </div>
             
-            <div class="partner-card">
-                <div class="partner-logo">🏛️</div>
-                <h3>ANTIC Cameroon</h3>
-                <p>National Agency for Information and Communication Technologies</p>
-                <p class="news-date">Government Partnership</p>
-            </div>
-            
-            <div class="partner-card">
-                <div class="partner-logo">🤝</div>
-                <h3>Local Tech Hub</h3>
-                <p>Community Innovation Partner</p>
-                <p class="news-date">Community Partner</p>
+            <div class="partners-grid">
+                <div class="partner-card animate-in">
+                    <div class="partner-logo">
+                        <i class="fas fa-server fa-3x" style="color: #78C0E0;"></i>
+                    </div>
+                    <h3>DreamHost</h3>
+                    <p class="text-small">Web Infrastructure Partner</p>
+                    <div class="partner-info">
+                        <p>Providing robust hosting solutions and technical infrastructure for our digital platforms.</p>
+                        <p class="text-primary mt-1"><i class="fas fa-calendar-alt"></i> Partner since 2023</p>
+                    </div>
+                </div>
+                
+                <div class="partner-card animate-in delay-1">
+                    <div class="partner-logo">
+                        <i class="fas fa-landmark fa-3x" style="color: #2A9D8F;"></i>
+                    </div>
+                    <h3>ANTIC Cameroon</h3>
+                    <p class="text-small">National Agency for ICT</p>
+                    <div class="partner-info">
+                        <p>Official partnership with Cameroon's National Agency for Information and Communication Technologies.</p>
+                        <p class="text-primary mt-1"><i class="fas fa-award"></i> Certified Partner</p>
+                    </div>
+                </div>
+                
+                <div class="partner-card animate-in delay-2">
+                    <div class="partner-logo">
+                        <i class="fas fa-users fa-3x" style="color: #E9C46A;"></i>
+                    </div>
+                    <h3>Local Tech Hub</h3>
+                    <p class="text-small">Community Innovation Partner</p>
+                    <div class="partner-info">
+                        <p>Collaborating with local tech communities to foster innovation and digital skills development.</p>
+                        <p class="text-primary mt-1"><i class="fas fa-handshake"></i> Community Partner</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- News Section -->
     <section class="section" id="news">
-        <div class="section-title">
-            <h2>Latest Announcements</h2>
-            <p>Stay updated with our latest news and achievements</p>
-        </div>
-        
-        <div class="news-grid">
-            <div class="news-card">
-                <div class="news-image"></div>
-                <div class="news-content">
-                    <div class="news-date">March 15, 2024</div>
-                    <h3>New Partnership with DreamHost</h3>
-                    <p>We're excited to announce our partnership with DreamHost for enhanced web infrastructure and hosting solutions.</p>
-                </div>
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>Latest Announcements</h2>
+                <p class="section-subtitle">Stay updated with our latest news and achievements</p>
             </div>
             
-            <div class="news-card">
-                <div class="news-image"></div>
-                <div class="news-content">
-                    <div class="news-date">March 10, 2024</div>
-                    <h3>ANTIC Certification Awarded</h3>
-                    <p>S-Tech Digital Ink receives certification from ANTIC for compliance with national digital standards.</p>
+            <div class="news-grid">
+                <div class="news-card animate-in">
+                    <div class="news-image">
+                        <div class="news-date">March 15, 2024</div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">Partnership</span>
+                        <h3>New Partnership with DreamHost</h3>
+                        <p>We're excited to announce our strategic partnership with DreamHost, a global web hosting leader. This collaboration will enhance our digital infrastructure and support our scaling efforts across Africa.</p>
+                        <a href="#" class="btn btn-sm btn-outline mt-2">Read More</a>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="news-card">
-                <div class="news-image"></div>
-                <div class="news-content">
-                    <div class="news-date">March 5, 2024</div>
-                    <h3>Digital Literacy Program Launch</h3>
-                    <p>Our new program aims to train 1000+ youths in essential digital skills across Cameroon.</p>
+                
+                <div class="news-card animate-in delay-1">
+                    <div class="news-image">
+                        <div class="news-date">March 10, 2024</div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">Achievement</span>
+                        <h3>ANTIC Certification Awarded</h3>
+                        <p>S-Tech Digital Ink has received official certification from ANTIC Cameroon, recognizing our compliance with national digital standards and commitment to cybersecurity best practices.</p>
+                        <a href="#" class="btn btn-sm btn-outline mt-2">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="news-card animate-in delay-2">
+                    <div class="news-image">
+                        <div class="news-date">March 5, 2024</div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">Program Launch</span>
+                        <h3>Digital Literacy Program Launch</h3>
+                        <p>Our Digital Literacy Program officially launches this month, aiming to train 1000+ youths in essential digital skills across three regions of Cameroon.</p>
+                        <a href="#" class="btn btn-sm btn-outline mt-2">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter-section" id="contact">
-        <h2>Stay Connected</h2>
-        <p>Subscribe to our newsletter for updates on projects and opportunities</p>
-        
-        <form class="newsletter-form" id="newsletterForm">
-            <input type="email" class="newsletter-input" placeholder="Your email address" required>
-            <button type="submit" class="newsletter-btn">Subscribe</button>
-        </form>
-        
-        <p style="margin-top: 1rem; font-size: 0.9rem;">Email: sekaalvin6@gmail.com</p>
+    <!-- Newsletter Section -->
+    <section class="section newsletter-section" id="contact">
+        <div class="container">
+            <div class="newsletter-content animate-in">
+                <h2 class="text-center">Stay Connected</h2>
+                <p class="text-center mb-4">Subscribe to our newsletter for updates on projects, opportunities, and digital innovation insights.</p>
+                
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-accent">
+                        <i class="fas fa-paper-plane"></i> Subscribe
+                    </button>
+                </form>
+                
+                <div class="text-center mt-4">
+                    <p><i class="fas fa-envelope"></i> sekaalvin6@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +237 650-990-946</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Buea, Cameroon</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div>
-                <a href="#" class="footer-logo">
-                    <div class="logo-icon">🖋️</div>
-                    <span>S-Tech Digital Ink</span>
-                </a>
-                <p>Pioneering digital innovation in Cameroon and beyond.</p>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home" class="logo">
+                        <div class="logo-icon">ST</div>
+                        <div class="logo-text">
+                            <div class="logo-main">S-Tech Digital Ink</div>
+                            <div class="logo-tagline">Digitally Rewriting The Future</div>
+                        </div>
+                    </a>
+                    <p class="mt-2">Leading digital innovation in Cameroon and transforming Africa through technology.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#team"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#participate"><i class="fas fa-chevron-right"></i> Get Involved</a></li>
+                        <li><a href="#donate"><i class="fas fa-chevron-right"></i> Donate</a></li>
+                        <li><a href="#partners"><i class="fas fa-chevron-right"></i> Partners</a></li>
+                        <li><a href="#news"><i class="fas fa-chevron-right"></i> News</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Buea, Cameroon</p>
+                    <p><i class="fas fa-envelope"></i> sekaalvin6@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +237 650-990-946</p>
+                    <p><i class="fas fa-clock"></i> Mon - Fri: 9AM - 6PM</p>
+                </div>
             </div>
             
-            <div>
-                <h3>Quick Links</h3>
-                <ul style="list-style: none;">
-                    <li><a href="#home" style="color: var(--gray); text-decoration: none;">Home</a></li>
-                    <li><a href="#projects" style="color: var(--gray); text-decoration: none;">Projects</a></li>
-                    <li><a href="#participate" style="color: var(--gray); text-decoration: none;">Participate</a></li>
-                    <li><a href="#donate" style="color: var(--gray); text-decoration: none;">Donate</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2024 S-Tech Digital Ink. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--secondary);"></i> for Africa's digital future</p>
             </div>
-            
-            <div>
-                <h3>Contact</h3>
-                <p>📍 Cameroon, Buea</p>
-                <p>📧 sekaalvin6@gmail.com</p>
-                <p>📱 +237 650-990-946</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2024 S-Tech Digital Ink. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top">↑</a>
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!-- Payment Modal -->
-    <div class="payment-modal" id="paymentModal" style="display: none;">
+    <div class="modal" id="paymentModal">
         <div class="modal-content">
-            <button class="close-modal" onclick="closePaymentModal()">×</button>
-            <h2>Secure Payment</h2>
+            <button class="modal-close" onclick="closeModal('paymentModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="text-center mb-3">Secure Payment</h2>
+            <p class="text-center mb-4">Complete your donation to support digital innovation in Africa</p>
+            
             <form id="paymentForm">
                 <div class="form-group">
-                    <label>Card Number</label>
-                    <input type="text" class="form-control" placeholder="**** **** **** ****" required>
+                    <label class="form-label">Card Number</label>
+                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456" required maxlength="19">
                 </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Expiry Date</label>
+                        <input type="text" class="form-control" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">CVV</label>
+                        <input type="text" class="form-control" placeholder="123" required maxlength="4">
+                    </div>
+                </div>
+                
                 <div class="form-group">
-                    <label>Expiry Date</label>
-                    <input type="text" class="form-control" placeholder="MM/YY" required>
+                    <label class="form-label">Name on Card</label>
+                    <input type="text" class="form-control" placeholder="John Doe" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>CVV</label>
-                    <input type="text" class="form-control" placeholder="***" required>
+                    <label class="form-label">Email for Receipt</label>
+                    <input type="email" class="form-control" placeholder="john@example.com" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>Name on Card</label>
-                    <input type="text" class="form-control" required>
+                    <div class="d-flex justify-between align-center">
+                        <span>Donation Amount:</span>
+                        <span class="text-gradient font-weight-bold" id="modalDonationAmount">$50</span>
+                    </div>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="submitPayment()" style="width: 100%;">
-                    Pay <span id="paymentAmount">$50</span>
+                
+                <button type="button" class="btn btn-primary btn-lg w-100" onclick="submitPayment()">
+                    <i class="fas fa-lock"></i> Pay Securely
                 </button>
-                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">
-                    🔒 Secure payment processed via Stripe
+                
+                <p class="text-center mt-3 text-small">
+                    <i class="fas fa-shield-alt"></i> Your payment is secured with 256-bit SSL encryption
                 </p>
             </form>
         </div>
     </div>
 
-    <script>
-        // Preloader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('preloader').style.display = 'none';
-            }, 1000);
-        });
-
-        // Mobile Navigation
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Back to Top Button
-        const backToTop = document.querySelector('.back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-
-        // Donation Amount Selection
-        const donationAmounts = document.querySelectorAll('.donation-amount');
-        const customAmountInput = document.getElementById('customAmount');
-        const donationAmountDisplay = document.getElementById('donationAmount');
-        const paymentAmountDisplay = document.getElementById('paymentAmount');
-
-        let selectedAmount = 50;
-
-        donationAmounts.forEach(amount => {
-            amount.addEventListener('click', () => {
-                donationAmounts.forEach(a => a.classList.remove('selected'));
-                amount.classList.add('selected');
-                selectedAmount = parseInt(amount.dataset.amount);
-                updateDonationAmount(selectedAmount);
-                customAmountInput.value = '';
-            });
-        });
-
-        customAmountInput.addEventListener('input', () => {
-            if (customAmountInput.value) {
-                donationAmounts.forEach(a => a.classList.remove('selected'));
-                selectedAmount = parseInt(customAmountInput.value) || 0;
-                updateDonationAmount(selectedAmount);
-            }
-        });
-
-        function updateDonationAmount(amount) {
-            donationAmountDisplay.textContent = `$${amount}`;
-            paymentAmountDisplay.textContent = `$${amount}`;
-        }
-
-        // Process Donation
-        function processDonation() {
-            const donationForm = document.getElementById('donationForm');
-            const name = donationForm.querySelector('input[type="text"]').value;
-            const email = donationForm.querySelector('input[type="email"]').value;
+    <!-- Participation Modal -->
+    <div class="modal" id="participationModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('participationModal')">
+                <i class="fas fa-times"></i>
+            </button>
             
-            if (!name || !email) {
-                alert('Please fill in all required fields');
+            <h2 class="text-center mb-3" id="participationTitle">Join Our Movement</h2>
+            
+            <form id="participationForm">
+                <div id="participationContent">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="4" placeholder="Tell us about your interest..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content" id="notificationContent">
+            Notification message will appear here
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stripe/stripe-js@3"></script>
+    
+    <!-- Main JavaScript -->
+    <script>
+        // ===== GLOBAL VARIABLES =====
+        let selectedDonationAmount = 50;
+        let currentModal = null;
+        
+        // ===== DOM CONTENT LOADED =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize components
+            initNavbar();
+            initAnimations();
+            initDonationSystem();
+            initNewsletter();
+            initBackToTop();
+            initScrollAnimations();
+            
+            // Show page after load
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+        
+        // ===== NAVIGATION =====
+        function initNavbar() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const header = document.querySelector('.main-header');
+            
+            // Mobile menu toggle
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileToggle.innerHTML = navMenu.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu when clicking links
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    // Update active link
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('.main-header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // ===== ANIMATIONS =====
+        function initAnimations() {
+            // Register GSAP plugins
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Hero animations
+            gsap.from('.hero-title', {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: 'power3.out'
+            });
+            
+            gsap.from('.hero-subtitle', {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                delay: 0.3,
+                ease: 'power3.out'
+            });
+            
+            gsap.from('.hero-buttons', {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                delay: 0.6,
+                ease: 'power3.out'
+            });
+            
+            gsap.from('.hero-stats', {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                delay: 0.9,
+                ease: 'power3.out'
+            });
+            
+            // Floating elements animation
+            gsap.to('.floating-1', {
+                duration: 3,
+                y: '+=20',
+                rotation: '+=5',
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut'
+            });
+            
+            gsap.to('.floating-2', {
+                duration: 4,
+                y: '+=30',
+                rotation: '+=10',
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
+                delay: 0.5
+            });
+            
+            gsap.to('.floating-3', {
+                duration: 3.5,
+                y: '+=25',
+                rotation: '+=7',
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
+                delay: 1
+            });
+            
+            // Stats counter animation
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const counter = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        clearInterval(counter);
+                        current = target;
+                    }
+                    stat.textContent = Math.floor(current);
+                }, 16);
+            });
+            
+            // ScrollTrigger animations for sections
+            gsap.utils.toArray('.animate-in').forEach(element => {
+                gsap.from(element, {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 80%',
+                        toggleActions: 'play none none none'
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power3.out'
+                });
+            });
+        }
+        
+        // ===== DONATION SYSTEM =====
+        function initDonationSystem() {
+            const donationAmounts = document.querySelectorAll('.donation-amount');
+            const customAmountInput = document.getElementById('customAmount');
+            const donationAmountDisplay = document.getElementById('donationAmountDisplay');
+            const modalDonationAmount = document.getElementById('modalDonationAmount');
+            
+            // Set initial donation amount
+            updateDonationAmount(selectedDonationAmount);
+            
+            // Donation amount selection
+            donationAmounts.forEach(amount => {
+                amount.addEventListener('click', () => {
+                    // Remove selected class from all amounts
+                    donationAmounts.forEach(a => a.classList.remove('selected'));
+                    
+                    // Add selected class to clicked amount
+                    amount.classList.add('selected');
+                    
+                    // Update selected amount
+                    selectedDonationAmount = parseInt(amount.getAttribute('data-amount'));
+                    
+                    // Update display
+                    updateDonationAmount(selectedDonationAmount);
+                    
+                    // Clear custom amount input
+                    customAmountInput.value = '';
+                });
+            });
+            
+            // Custom amount input
+            customAmountInput.addEventListener('input', () => {
+                if (customAmountInput.value) {
+                    // Remove selected class from all preset amounts
+                    donationAmounts.forEach(a => a.classList.remove('selected'));
+                    
+                    // Update selected amount
+                    selectedDonationAmount = parseInt(customAmountInput.value) || 0;
+                    
+                    // Update display
+                    updateDonationAmount(selectedDonationAmount);
+                }
+            });
+            
+            function updateDonationAmount(amount) {
+                donationAmountDisplay.textContent = `$${amount}`;
+                modalDonationAmount.textContent = `$${amount}`;
+            }
+        }
+        
+        function processDonation() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const donorEmail = document.getElementById('donorEmail').value;
+            
+            // Validate form
+            if (!firstName || !lastName || !donorEmail) {
+                showNotification('Please fill in all required fields', 'error');
                 return;
             }
             
-            if (selectedAmount < 1) {
-                alert('Please enter a valid donation amount');
+            if (selectedDonationAmount < 1) {
+                showNotification('Please enter a valid donation amount', 'error');
+                return;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(donorEmail)) {
+                showNotification('Please enter a valid email address', 'error');
                 return;
             }
             
             // Show payment modal
-            document.getElementById('paymentModal').style.display = 'flex';
+            openModal('paymentModal');
         }
-
-        function closePaymentModal() {
-            document.getElementById('paymentModal').style.display = 'none';
-        }
-
-        // Submit Payment (Simulated)
+        
         function submitPayment() {
             const paymentForm = document.getElementById('paymentForm');
             const inputs = paymentForm.querySelectorAll('input[required]');
             
+            // Validate all required fields
             for (let input of inputs) {
                 if (!input.value) {
-                    alert('Please fill in all payment details');
+                    showNotification('Please fill in all payment details', 'error');
                     return;
                 }
             }
             
+            // Validate card number (simple validation)
+            const cardNumber = paymentForm.querySelector('input[placeholder*="Card Number"]').value;
+            if (cardNumber.replace(/\s/g, '').length < 16) {
+                showNotification('Please enter a valid card number', 'error');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = paymentForm.querySelector('button[type="button"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="loading"></span> Processing...';
+            submitBtn.disabled = true;
+            
             // Simulate payment processing
-            document.getElementById('paymentModal').style.innerHTML = `
-                <div class="modal-content">
-                    <h2 style="color: var(--success);">🎉 Payment Successful!</h2>
-                    <p>Thank you for your donation of $${selectedAmount}!</p>
-                    <p>A receipt has been sent to your email.</p>
-                    <button onclick="closePaymentModal()" class="btn btn-primary" style="margin-top: 2rem;">Close</button>
-                </div>
-            `;
-            
-            // In production, integrate with Stripe/Flutterwave/PayPal
-            // Stripe Integration Example:
-            // const stripe = Stripe('YOUR_PUBLISHABLE_KEY');
-            // stripe.redirectToCheckout({ sessionId: session.id });
+            setTimeout(() => {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Close payment modal
+                closeModal('paymentModal');
+                
+                // Reset donation form
+                document.getElementById('donationForm').reset();
+                donationAmounts.forEach(a => a.classList.remove('selected'));
+                document.querySelector('.donation-amount[data-amount="50"]').classList.add('selected');
+                selectedDonationAmount = 50;
+                updateDonationAmount(selectedDonationAmount);
+                
+                // Show success notification
+                showNotification(`Thank you for your donation of $${selectedDonationAmount}! A receipt has been sent to your email.`, 'success');
+                
+                // In production, integrate with actual payment gateway
+                // Example with Stripe:
+                // const stripe = Stripe('YOUR_PUBLISHABLE_KEY');
+                // stripe.redirectToCheckout({ sessionId: session.id });
+            }, 2000);
         }
-
-        // Newsletter Subscription
-        const newsletterForm = document.getElementById('newsletterForm');
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = newsletterForm.querySelector('input[type="email"]').value;
+        
+        // ===== NEWSLETTER =====
+        function initNewsletter() {
+            const newsletterForm = document.getElementById('newsletterForm');
             
-            // Simulate API call to your backend
-            fetch('https://your-backend.com/subscribe', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: email })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Thank you for subscribing!');
-                newsletterForm.reset();
-            })
-            .catch(() => {
-                // Fallback for demo
-                alert('Subscription successful! (Demo mode)');
-                newsletterForm.reset();
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const emailInput = this.querySelector('input[type="email"]');
+                const email = emailInput.value;
+                
+                // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showNotification('Please enter a valid email address', 'error');
+                    return;
+                }
+                
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span class="loading"></span> Subscribing...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Show success message
+                    showNotification('Thank you for subscribing to our newsletter!', 'success');
+                    
+                    // In production, send to your backend
+                    // fetch('/api/subscribe', {
+                    //     method: 'POST',
+                    //     headers: { 'Content-Type': 'application/json' },
+                    //     body: JSON.stringify({ email: email })
+                    // })
+                }, 1500);
             });
-        });
-
-        // Participation Forms
-        function openParticipationForm(type) {
-            const forms = {
-                volunteer: 'https://docs.google.com/forms/d/e/your-volunteer-form',
-                partner: 'https://docs.google.com/forms/d/e/your-partner-form',
-                innovate: 'https://docs.google.com/forms/d/e/your-idea-form'
-            };
-            
-            window.open(forms[type] || '#', '_blank');
         }
-
-        // Animate on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+        
+        // ===== MODAL SYSTEM =====
+        function openModal(modalType) {
+            let modalId = '';
+            let modalTitle = '';
+            let modalContent = '';
+            
+            switch(modalType) {
+                case 'paymentModal':
+                    modalId = 'paymentModal';
+                    break;
+                    
+                case 'volunteer':
+                    modalId = 'participationModal';
+                    modalTitle = 'Volunteer Application';
+                    modalContent = `
+                        <p class="mb-3">Join our team of volunteers and help us transform Africa's digital landscape. We're looking for passionate individuals with skills in:</p>
+                        <ul class="mb-3">
+                            <li>Web Development</li>
+                            <li>Digital Marketing</li>
+                            <li>UI/UX Design</li>
+                            <li>Project Management</li>
+                            <li>Community Outreach</li>
+                        </ul>
+                        <p>Please fill out the form below and we'll get back to you within 48 hours.</p>
+                    `;
+                    break;
+                    
+                case 'partner':
+                    modalId = 'participationModal';
+                    modalTitle = 'Partnership Inquiry';
+                    modalContent = `
+                        <p class="mb-3">Interested in partnering with S-Tech Digital Ink? We collaborate with organizations in various ways:</p>
+                        <ul class="mb-3">
+                            <li>Corporate Sponsorship</li>
+                            <li>Project Collaboration</li>
+                            <li>Resource Sharing</li>
+                            <li>Joint Ventures</li>
+                            <li>Knowledge Exchange</li>
+                        </ul>
+                        <p>Tell us about your organization and how you'd like to collaborate.</p>
+                    `;
+                    break;
+                    
+                case 'idea':
+                    modalId = 'participationModal';
+                    modalTitle = 'Submit Your Idea';
+                    modalContent = `
+                        <p class="mb-3">Have an innovative idea that could transform Africa's digital landscape? We want to hear from you!</p>
+                        <p class="mb-3">We're particularly interested in ideas related to:</p>
+                        <ul class="mb-3">
+                            <li>Digital Education Solutions</li>
+                            <li>Agricultural Technology</li>
+                            <li>Healthcare Technology</li>
+                            <li>Financial Inclusion</li>
+                            <li>Sustainable Technology</li>
+                        </ul>
+                        <p>Describe your idea in detail below. Our team will review it and get back to you.</p>
+                    `;
+                    break;
+            }
+            
+            const modal = document.getElementById(modalId);
+            
+            if (modalId === 'participationModal') {
+                document.getElementById('participationTitle').textContent = modalTitle;
+                document.getElementById('participationContent').innerHTML = modalContent;
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            currentModal = modalId;
+        }
+        
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            currentModal = null;
+            
+            // Reset forms if needed
+            if (modalId === 'participationModal') {
+                document.getElementById('participationForm').reset();
+            }
+        }
+        
+        // Close modal on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && currentModal) {
+                closeModal(currentModal);
+            }
+        });
+        
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal.id);
                 }
             });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('.section, .project-card, .participation-card, .news-card').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
         });
-
-        // Particle Background (Optional Enhancement)
-        // You can add particles.js for more visual effects
-        // particlesJS.load('hero-bg', 'particles.json', function() {});
-
-        // Google Analytics (Add your tracking ID)
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_GA_TRACKING_ID');
-    </script>
-
-    <!-- External Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@stripe/stripe-js@3"></script>
-    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    
-    <!-- SEO Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "S-Tech Digital Ink",
-        "description": "Cameroon's leading digital innovation startup",
-        "url": "https://stechdigitalink.com",
-        "logo": "https://stechdigitalink.com/logo.png",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "Cameroon",
-            "addressRegion": "Southwest",
-            "addressLocality": "Buea"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "sekaalvin6@gmail.com",
-            "telephone": "+237650990946"
+        
+        // ===== NOTIFICATION SYSTEM =====
+        function showNotification(message, type = 'info') {
+            const notification = document.getElementById('notification');
+            const notificationContent = document.getElementById('notificationContent');
+            
+            // Set message and type
+            notificationContent.textContent = message;
+            notification.className = 'notification';
+            notification.classList.add(type);
+            
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            // Hide after 5 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 5000);
         }
-    }
+        
+        // ===== BACK TO TOP =====
+        function initBackToTop() {
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // ===== SCROLL ANIMATIONS =====
+        function initScrollAnimations() {
+            // Add scroll animation to elements
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all animate-in elements
+            document.querySelectorAll('.animate-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        // ===== PARTICIPATION FORM =====
+        document.getElementById('participationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="loading"></span> Submitting...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Close modal
+                closeModal('participationModal');
+                
+                // Show success message
+                showNotification('Thank you for your submission! We will get back to you within 48 hours.', 'success');
+                
+                // Reset form
+                this.reset();
+            }, 2000);
+        });
+        
+        // ===== ADDITIONAL ANIMATIONS =====
+        // Glitch effect on logo
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('mouseenter', () => {
+            logo.classList.add('glitch');
+            setTimeout(() => {
+                logo.classList.remove('glitch');
+            }, 500);
+        });
+        
+        // Pulse effect on CTA buttons
+        setInterval(() => {
+            const ctaButtons = document.querySelectorAll('.btn-primary');
+            ctaButtons.forEach(btn => {
+                btn.classList.add('pulse');
+                setTimeout(() => {
+                    btn.classList.remove('pulse');
+                }, 2000);
+            });
+        }, 10000);
+        
+        // Rotate service icons on hover
+        document.querySelectorAll('.service-icon').forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.style.transform = 'rotate(360deg)';
+                icon.style.transition = 'transform 0.6s ease';
+            });
+            
+            icon.addEventListener('mouseleave', () => {
+                icon.style.transform = 'rotate(0deg)';
+            });
+        });
+        
+        // ===== REAL-TIME UPDATES =====
+        // Update announcement periodically
+        const announcements = [
+            "🔥 NEW: Digital Literacy Program now accepting applications in 3 regions of Cameroon",
+            "🌟 Partnership Announcement: S-Tech Digital Ink partners with DreamHost for enhanced web infrastructure",
+            "⚡ Limited spots available for our volunteer program - Apply today!",
+            "🎉 We've impacted 500+ people through our digital initiatives",
+            "📢 ANTIC Certification achieved - Setting new standards for digital excellence in Cameroon"
+        ];
+        
+        let currentAnnouncement = 0;
+        setInterval(() => {
+            const announcementScroll = document.querySelector('.announcement-scroll');
+            currentAnnouncement = (currentAnnouncement + 1) % announcements.length;
+            
+            // Fade out
+            gsap.to(announcementScroll, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    announcementScroll.textContent = announcements[currentAnnouncement];
+                    // Fade in
+                    gsap.to(announcementScroll, {
+                        opacity: 1,
+                        duration: 0.5
+                    });
+                }
+            });
+        }, 15000);
+        
+        // ===== PERFORMANCE OPTIMIZATION =====
+        // Lazy loading for images
+        const images = document.querySelectorAll('img');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => {
+            if (img.dataset.src) {
+                imageObserver.observe(img);
+            }
+        });
+        
+        // ===== ERROR HANDLING =====
+        window.addEventListener('error', function(e) {
+            console.error('Error occurred:', e.error);
+            // You could send this to an error tracking service
+        });
+        
+        // ===== ANALYTICS (Example) =====
+        function trackEvent(category, action, label) {
+            // Example: Implement Google Analytics or similar
+            console.log(`Event tracked: ${category} - ${action} - ${label}`);
+            
+            // Example GA4 implementation:
+            // gtag('event', action, {
+            //     'event_category': category,
+            //     'event_label': label
+            // });
+        }
+        
+        // Track button clicks
+        document.querySelectorAll('.btn, .nav-link').forEach(button => {
+            button.addEventListener('click', function() {
+                const action = this.textContent.trim() || this.getAttribute('href');
+                trackEvent('User Interaction', 'Click', action);
+            });
+        });
+        
+        // Track form submissions
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function() {
+                trackEvent('Form', 'Submit', this.id || 'Unknown Form');
+            });
+        });
+        
+        // ===== PRINT STYLES =====
+        window.addEventListener('beforeprint', () => {
+            document.body.classList.add('printing');
+        });
+        
+        window.addEventListener('afterprint', () => {
+            document.body.classList.remove('printing');
+        });
     </script>
 </body>
 </html>
