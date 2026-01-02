@@ -1,0 +1,2621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STDI Beta Labs | Test Future Innovations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* (Keep all your existing CSS styles - they're excellent) */
+        /* I'm just showing the first part to save space, but your full CSS remains */
+        :root {
+            --primary-dark: #0a2540;
+            --primary: #1a365d;
+            --primary-light: #2d4a8a;
+            --secondary: #00b4d8;
+            --secondary-light: #90e0ef;
+            --accent: #7b2cbf;
+            --accent-light: #9d4edd;
+            --dark: #0d1b2a;
+            --dark-medium: #1b263b;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #6c757d;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --info: #3498db;
+            --beta: #ff6b35;
+            --beta-light: #ff9e6d;
+            
+            --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--dark-medium) 100%);
+            --gradient-beta: linear-gradient(135deg, var(--beta) 0%, var(--beta-light) 100%);
+            
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.25);
+            --shadow-primary: 0 10px 30px rgba(26, 54, 93, 0.3);
+            --shadow-secondary: 0 10px 30px rgba(0, 180, 216, 0.3);
+            --shadow-beta: 0 10px 30px rgba(255, 107, 53, 0.3);
+            
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-secondary: 'Space Grotesk', 'Inter', sans-serif;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        :root {
+            --primary-dark: #0a2540;
+            --primary: #1a365d;
+            --primary-light: #2d4a8a;
+            --secondary: #00b4d8;
+            --secondary-light: #90e0ef;
+            --accent: #7b2cbf;
+            --accent-light: #9d4edd;
+            --dark: #0d1b2a;
+            --dark-medium: #1b263b;
+            --light: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #6c757d;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --info: #3498db;
+            --beta: #ff6b35;
+            --beta-light: #ff9e6d;
+            
+            --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--dark-medium) 100%);
+            --gradient-beta: linear-gradient(135deg, var(--beta) 0%, var(--beta-light) 100%);
+            
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.25);
+            --shadow-primary: 0 10px 30px rgba(26, 54, 93, 0.3);
+            --shadow-secondary: 0 10px 30px rgba(0, 180, 216, 0.3);
+            --shadow-beta: 0 10px 30px rgba(255, 107, 53, 0.3);
+            
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-secondary: 'Space Grotesk', 'Inter', sans-serif;
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 9999px;
+            
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            background: var(--dark);
+            color: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(26, 54, 93, 0.1) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(123, 44, 191, 0.05) 0%, transparent 25%),
+                radial-gradient(circle at 50% 80%, rgba(0, 180, 216, 0.05) 0%, transparent 25%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* Glitch Background Animation */
+        .glitch-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            z-index: -1;
+            pointer-events: none;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, var(--beta) 2px, var(--beta) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, var(--secondary) 2px, var(--secondary) 4px);
+            animation: glitchMove 20s linear infinite;
+        }
+        
+        @keyframes glitchMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 27, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--gradient-beta);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--dark);
+            font-family: var(--font-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-icon::after {
+            content: 'β';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            font-size: 0.7rem;
+            color: var(--beta);
+            font-weight: 900;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-family: var(--font-secondary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--beta-light);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            padding: 8px 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-beta);
+            border-radius: var(--radius-full);
+            transition: width var(--transition-normal);
+        }
+        
+        .nav-link:hover {
+            color: var(--beta-light);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        /* Beta Badge */
+        .beta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(255, 107, 53, 0.2);
+            border: 1px solid var(--beta);
+            border-radius: var(--radius-full);
+            color: var(--beta-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .beta-badge i {
+            font-size: 0.7rem;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-family: var(--font-secondary);
+        }
+        
+        .hero-title .glitch {
+            position: relative;
+            display: inline-block;
+            color: var(--beta);
+        }
+        
+        .hero-title .glitch::before,
+        .hero-title .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .hero-title .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--secondary);
+            animation: glitch-1 2s infinite linear alternate-reverse;
+            clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+        }
+        
+        .hero-title .glitch::after {
+            left: -2px;
+            text-shadow: 2px 0 var(--accent);
+            animation: glitch-2 3s infinite linear alternate-reverse;
+            clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+        }
+        
+        @keyframes glitch-1 {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-2px); }
+            100% { transform: translateX(2px); }
+        }
+        
+        @keyframes glitch-2 {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(2px); }
+            100% { transform: translateX(-2px); }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--light-gray);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-beta);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+            border-radius: var(--radius-lg);
+            opacity: 0.1;
+        }
+        
+        .floating-1 {
+            top: 20%;
+            right: 10%;
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-beta);
+            animation-delay: 0s;
+        }
+        
+        .floating-2 {
+            bottom: 30%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            animation-delay: 1s;
+        }
+        
+        .floating-3 {
+            top: 40%;
+            left: 15%;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-accent);
+            animation-delay: 2s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 100px 0;
+            background: var(--dark-medium);
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-secondary);
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-beta);
+            border-radius: var(--radius-full);
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-beta);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+            z-index: -1;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: transparent;
+            box-shadow: var(--shadow-beta);
+        }
+        
+        .feature-card:hover::before {
+            opacity: 0.1;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-beta);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-family: var(--font-secondary);
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            padding: 100px 0;
+        }
+        
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+            color: var(--light-gray);
+            font-family: var(--font-primary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--beta);
+            color: var(--beta-light);
+        }
+        
+        .filter-btn.active {
+            background: rgba(255, 107, 53, 0.1);
+            border-color: var(--beta);
+            color: var(--beta-light);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-normal);
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--beta);
+            box-shadow: var(--shadow-beta);
+        }
+        
+        .project-header {
+            padding: 25px 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .project-status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 6px 15px;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .status-alpha {
+            background: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+            border: 1px solid rgba(231, 76, 60, 0.3);
+        }
+        
+        .status-beta {
+            background: rgba(255, 107, 53, 0.2);
+            color: var(--beta-light);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
+        
+        .status-release {
+            background: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+            border: 1px solid rgba(46, 204, 113, 0.3);
+        }
+        
+        .project-header h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+        
+        .project-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .project-content {
+            padding: 25px 30px;
+        }
+        
+        .project-description {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .project-features {
+            margin-bottom: 25px;
+        }
+        
+        .project-features ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .project-features li {
+            color: var(--light-gray);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        .project-features li::before {
+            content: '▸';
+            color: var(--beta);
+            position: absolute;
+            left: -15px;
+        }
+        
+        .project-stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius-md);
+        }
+        
+        .stat {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--beta);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .project-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: var(--radius-full);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-100%);
+            transition: transform var(--transition-normal);
+        }
+        
+        .btn:hover::before {
+            transform: translateX(0);
+        }
+        
+        .btn-primary {
+            background: var(--gradient-beta);
+            color: var(--dark);
+            box-shadow: var(--shadow-beta);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 180, 216, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--beta);
+            color: var(--beta-light);
+        }
+        
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-lg {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--dark-medium);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-xl);
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-normal);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--beta);
+            box-shadow: var(--shadow-beta);
+        }
+        
+        .testimonial-rating {
+            color: var(--beta);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-text {
+            color: var(--light-gray);
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-beta);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .author-info h4 {
+            font-family: var(--font-secondary);
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .author-role {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-card {
+            background: var(--gradient-dark);
+            border-radius: var(--radius-xl);
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path fill="%23ff6b35" opacity="0.03" d="M0,0l1000,0l0,1000l-1000,0l0,-1000z M250,250l500,0l0,500l-500,0l0,-500z"></path></svg>');
+            z-index: 0;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-title {
+            font-family: var(--font-secondary);
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.2rem;
+            color: var(--light-gray);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-form {
+            max-width: 500px;
+            margin: 40px auto 0;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .cta-input {
+            flex: 1;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-full);
+            color: white;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+        }
+        
+        .cta-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .cta-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--beta);
+        }
+        
+        /* Footer */
+        .main-footer {
+            background: var(--dark-medium);
+            padding: 80px 0 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .footer-links h4 {
+            font-family: var(--font-secondary);
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--medium-gray);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--beta-light);
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            color: var(--medium-gray);
+        }
+        
+        .footer-contact i {
+            color: var(--beta);
+            width: 20px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+        
+        .social-link:hover {
+            background: var(--beta);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 27, 42, 0.95);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+        }
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+        }
+        
+        .modal-content {
+            background: var(--dark-medium);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            transform: translateY(20px);
+            transition: transform var(--transition-normal);
+        }
+        
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color var(--transition-fast);
+        }
+        
+        .modal-close:hover {
+            color: var(--beta);
+        }
+        
+        .modal-title {
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .modal-title i {
+            color: var(--beta);
+        }
+        
+        .modal-body {
+            margin-bottom: 30px;
+        }
+        
+        .modal-body p {
+            color: var(--light-gray);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--light-gray);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            color: var(--light);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--beta);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .modal-actions .btn {
+            flex: 1;
+        }
+        
+        /* Project Modal */
+        .project-modal .modal-content {
+            max-width: 800px;
+        }
+        
+        .project-preview {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-medium) 100%);
+            border-radius: var(--radius-lg);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--medium-gray);
+            font-size: 1.2rem;
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+        }
+        
+        .requirements-list {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .requirements-list h4 {
+            color: var(--beta);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .requirements-list ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .requirements-list li {
+            color: var(--light-gray);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        .requirements-list li::before {
+            content: '✓';
+            color: var(--beta);
+            position: absolute;
+            left: -20px;
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 20px 25px;
+            background: var(--dark-medium);
+            border-left: 4px solid var(--success);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            transform: translateX(150%);
+            transition: transform var(--transition-normal);
+            z-index: 1000;
+            max-width: 350px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification.error {
+            border-left-color: var(--danger);
+        }
+        
+        .notification.warning {
+            border-left-color: var(--warning);
+        }
+        
+        .notification.info {
+            border-left-color: var(--info);
+        }
+        
+        .notification-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .notification-content {
+            flex: 1;
+        }
+        
+        .notification-title {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .notification-message {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Loading */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--beta);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .cta-form {
+                flex-direction: column;
+            }
+            
+            .project-actions {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+        
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-beta {
+            color: var(--beta);
+        }
+        
+        .mt-1 { margin-top: 10px; }
+        .mt-2 { margin-top: 20px; }
+        .mt-3 { margin-top: 30px; }
+        .mb-1 { margin-bottom: 10px; }
+        .mb-2 { margin-bottom: 20px; }
+        .mb-3 { margin-bottom: 30px; }
+        
+        .w-100 { width: 100%; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Add this new style for live testing indicator */
+        .live-testing {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+        }
+        
+        .project-url {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px 15px;
+            border-radius: var(--radius-md);
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+            border-left: 3px solid var(--beta);
+        }
+        
+        .project-url a {
+            color: var(--beta-light);
+            text-decoration: none;
+        }
+        
+        .project-url a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Glitch Background -->
+    <div class="glitch-bg"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-element floating-1"></div>
+    <div class="floating-element floating-2"></div>
+    <div class="floating-element floating-3"></div>
+    
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">ST</div>
+                <div class="logo-text">
+                    <div class="logo-main">S-Tech Digital Ink</div>
+                    <div class="logo-subtitle">BETA LABS</div>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#join" class="nav-link">Join Beta</a>
+            </nav>
+            
+            <div class="header-actions">
+                <span class="beta-badge">
+                    <i class="fas fa-flask"></i> BETA TESTING
+                </span>
+                <button class="btn btn-primary btn-sm" onclick="openModal('joinModal')">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Test the Future at
+                    <span class="glitch" data-text="STDI BETA LABS">STDI BETA LABS</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Be among the first to experience groundbreaking innovations from S-Tech Digital Ink. 
+                    Join our exclusive beta testing community and help shape the future of technology.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i> Explore Beta Projects
+                    </a>
+                    <button class="btn btn-secondary btn-lg" onclick="openModal('joinModal')">
+                        <i class="fas fa-flask"></i> Join Beta Program
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Active Beta Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="1537">0</div>
+                        <div class="stat-label">Beta Testers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="89">0</div>
+                        <div class="stat-label">Features Shaped</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Join Beta Labs?</h2>
+                <p class="section-subtitle">
+                    Get exclusive access, influence development, and be part of something revolutionary
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Early Access</h3>
+                    <p>Be the first to test cutting-edge technologies before they're released to the public.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Direct Feedback</h3>
+                    <p>Your opinions matter. Influence product development with direct feedback to our engineers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Exclusive Rewards</h3>
+                    <p>Earn badges, early access passes, and special recognition as a valued beta tester.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Access</h3>
+                    <p>Join a community of tech enthusiasts, developers, and innovators in our private Discord.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Career Growth</h3>
+                    <p>Build your portfolio with hands-on experience testing advanced software solutions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security First</h3>
+                    <p>All projects are tested in secure, isolated environments to protect your privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Beta Projects</h2>
+                <p class="section-subtitle">
+                    Test groundbreaking projects and help us perfect them before launch
+                </p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="alpha">Alpha Testing</button>
+                <button class="filter-btn" data-filter="beta">Beta Testing</button>
+                <button class="filter-btn" data-filter="release">Pre-Release</button>
+                <button class="filter-btn" data-filter="ai">AI Projects</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="web">Web Platforms</button>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Beta Testers Say</h2>
+                <p class="section-subtitle">
+                    Hear from our community of passionate beta testers
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Testing AI Vision was incredible! The team actually implemented my suggestions. 
+                        It's amazing to see your feedback shape real products."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h4>Alex K.</h4>
+                            <span class="author-role">Senior Beta Tester</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The beta community is fantastic! I've learned so much about development 
+                        and made great connections with other tech enthusiasts."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MF</div>
+                        <div class="author-info">
+                            <h4>Maria F.</h4>
+                            <span class="author-role">UX Designer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Being a beta tester helped me land my first tech job. The experience 
+                        and portfolio projects were invaluable during interviews."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DJ</div>
+                        <div class="author-info">
+                            <h4>David J.</h4>
+                            <span class="author-role">Junior Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="join">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Shape the Future?</h2>
+                    <p class="cta-subtitle">
+                        Join our exclusive beta testing program and get early access to revolutionary 
+                        technologies. Limited spots available for passionate testers.
+                    </p>
+                    
+                    <form class="cta-form" id="betaForm">
+                        <input type="email" class="cta-input" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Join Beta
+                        </button>
+                    </form>
+                    
+                    <p class="mt-3" style="color: var(--medium-gray); font-size: 0.9rem;">
+                        <i class="fas fa-lock"></i> Your information is secure and will only be used for beta program communications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">ST</div>
+                        <div class="logo-text">
+                            <div class="logo-main">S-Tech Digital Ink</div>
+                            <div class="logo-subtitle">BETA LABS</div>
+                        </div>
+                    </a>
+                    <p class="mt-2" style="color: var(--medium-gray);">
+                        Pioneering the future through community-driven development and innovation.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Beta Labs</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Available Projects</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tester Guidelines</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Rewards Program</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Community Forum</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Documentation</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> API Reference</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Bug Reporting</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Feature Requests</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> beta@stechdigitalink.com</p>
+                    <p><i class="fas fa-phone"></i> +237 650 990 946</p>
+                    <p><i class="fas fa-phone"></i> +237 6 81 64 71 13</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Buea, Cameroon</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM WAT</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 S-Tech Digital Ink Beta Labs. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--beta);"></i> for innovators</p>
+                <p class="mt-1"><a href="#" style="color: var(--medium-gray);">Privacy Policy</a> • <a href="#" style="color: var(--medium-gray);">Terms of Service</a> • <a href="#" style="color: var(--medium-gray);">Beta Agreement</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Join Beta Modal -->
+    <div class="modal" id="joinModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('joinModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="modal-title">
+                <i class="fas fa-user-plus"></i> Join Beta Program
+            </h2>
+            
+            <div class="modal-body">
+                <p>Complete the form below to apply for our exclusive beta testing program. 
+                We're looking for passionate testers who can provide valuable feedback.</p>
+                
+                <form id="applicationForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="applicantEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Professional Background</label>
+                        <select class="form-control" id="background">
+                            <option value="">Select your background</option>
+                            <option value="developer">Software Developer</option>
+                            <option value="designer">UI/UX Designer</option>
+                            <option value="tester">QA Tester</option>
+                            <option value="student">Student</option>
+                            <option value="enthusiast">Tech Enthusiast</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Technical Skills</label>
+                        <input type="text" class="form-control" id="skills" 
+                               placeholder="e.g., JavaScript, Python, React, AI/ML">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Why do you want to join? (Optional)</label>
+                        <textarea class="form-control" id="motivation" 
+                                  placeholder="Tell us why you'd be a great beta tester..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            <input type="checkbox" id="terms" required>
+                            I agree to the Beta Testing Agreement and Privacy Policy
+                        </label>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeModal('joinModal')">Cancel</button>
+                <button class="btn btn-primary" onclick="submitApplication()">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div class="modal project-modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('projectModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div id="projectModalContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div class="modal" id="feedbackModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('feedbackModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="modal-title">
+                <i class="fas fa-comment-dots"></i> Submit Feedback
+            </h2>
+            
+            <div class="modal-body">
+                <p>Your feedback helps us improve. Please be specific about your experience.</p>
+                
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label class="form-label">Project</label>
+                        <input type="text" class="form-control" id="feedbackProject" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Feedback Type</label>
+                        <select class="form-control" id="feedbackType">
+                            <option value="bug">Bug Report</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="ui">UI/UX Feedback</option>
+                            <option value="performance">Performance Issue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-control" id="feedbackTitle" 
+                               placeholder="Brief description of your feedback" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Detailed Description</label>
+                        <textarea class="form-control" id="feedbackDescription" 
+                                  placeholder="Please describe your feedback in detail..." 
+                                  rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Severity</label>
+                        <select class="form-control" id="feedbackSeverity">
+                            <option value="low">Low - Minor issue</option>
+                            <option value="medium" selected>Medium - Moderate issue</option>
+                            <option value="high">High - Major issue</option>
+                            <option value="critical">Critical - Blocks usage</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Steps to Reproduce (if bug)</label>
+                        <textarea class="form-control" id="feedbackSteps" 
+                                  placeholder="1. Go to...&#10;2. Click on...&#10;3. Observe..." 
+                                  rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeModal('feedbackModal')">Cancel</button>
+                <button class="btn btn-primary" onclick="submitFeedback()">
+                    <i class="fas fa-paper-plane"></i> Submit Feedback
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="notification-content">
+            <div class="notification-title" id="notificationTitle">Success</div>
+            <div class="notification-message" id="notificationMessage">Operation completed successfully</div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== APP STATE =====
+        const appState = {
+            projects: [],
+            currentProject: null,
+            user: null,
+            testers: 1537,
+            activeProjects: 24,
+            featuresShaped: 89
+        };
+
+        // ===== ENHANCED PROJECT DATA WITH YOUR PROJECTS =====
+        const projectsData = [
+            {
+                id: 'buildora-social',
+                title: 'Buildora Social',
+                description: 'Next-generation professional networking platform connecting African developers with global opportunities.',
+                status: 'beta',
+                category: 'web',
+                testers: 567,
+                feedback: 2345,
+                version: '1.2.0',
+                launchDate: '2024-05-20',
+                features: [
+                    'Smart job matching',
+                    'Portfolio showcase',
+                    'Real-time collaboration',
+                    'Skill verification',
+                    'Mentorship programs'
+                ],
+                requirements: [
+                    'Any modern browser',
+                    'Account registration',
+                    'Profile completion',
+                    'Professional bio'
+                ],
+                // NEW: Added project file path
+                projectFile: 'buildora social.html',
+                liveDemo: true,
+                tags: ['social', 'networking', 'career']
+            },
+            {
+                id: 'pro-camera',
+                title: 'ProCamera 100',
+                description: 'High-speed camera software capable of capturing 100 frames per second directly in browser.',
+                status: 'beta',
+                category: 'web',
+                testers: 278,
+                feedback: 987,
+                version: '1.0.0',
+                launchDate: '2024-07-01',
+                features: [
+                    '100 FPS capture',
+                    'Real-time editing',
+                    'Motion detection',
+                    'Batch processing',
+                    'Cloud storage integration'
+                ],
+                requirements: [
+                    'Modern browser with camera access',
+                    'WebRTC support',
+                    'Good lighting conditions',
+                    'Stable internet connection'
+                ],
+                // NEW: Added project file path
+                projectFile: 'procamera 100.html',
+                liveDemo: true,
+                tags: ['camera', 'multimedia', 'real-time']
+            },
+            {
+                id: 'logo-maker',
+                title: 'LogoMaker AI',
+                description: 'AI-powered logo design platform that creates professional logos in seconds.',
+                status: 'beta',
+                category: 'ai',
+                testers: 423,
+                feedback: 1567,
+                version: '1.5.3',
+                launchDate: '2024-06-10',
+                features: [
+                    'AI-generated designs',
+                    'Custom branding packages',
+                    'Vector export',
+                    'Template library',
+                    'Color palette suggestions'
+                ],
+                requirements: [
+                    'Modern browser',
+                    'JavaScript enabled',
+                    'Basic design knowledge',
+                    'Creative Commons account for assets'
+                ],
+                // NEW: Added project file path
+                projectFile: 'logomaker.html',
+                liveDemo: true,
+                tags: ['design', 'ai', 'branding']
+            },
+            {
+                id: 'ai-vision',
+                title: 'AI Vision Pro',
+                description: 'Advanced computer vision platform that can analyze images and videos in real-time with 99.8% accuracy.',
+                status: 'beta',
+                category: 'ai',
+                testers: 342,
+                feedback: 1287,
+                version: '0.8.2',
+                launchDate: '2024-06-15',
+                features: [
+                    'Real-time object detection',
+                    'Facial recognition',
+                    'Scene understanding',
+                    'Multi-language OCR',
+                    'Custom model training'
+                ],
+                requirements: [
+                    'Modern browser with WebGL support',
+                    'Minimum 4GB RAM',
+                    'Webcam for live testing',
+                    'Stable internet connection'
+                ],
+                projectFile: null,
+                liveDemo: false,
+                tags: ['ai', 'computer-vision', 'ml']
+            },
+            {
+                id: 'quantum-sim',
+                title: 'Quantum Simulator',
+                description: 'Quantum computing simulation platform for researchers and developers to test quantum algorithms.',
+                status: 'alpha',
+                category: 'ai',
+                testers: 89,
+                feedback: 432,
+                version: '0.3.1',
+                launchDate: '2024-09-30',
+                features: [
+                    'Up to 20-qubit simulation',
+                    'Quantum circuit designer',
+                    'Algorithm library',
+                    'Real-time visualization',
+                    'Export to QASM'
+                ],
+                requirements: [
+                    'Modern browser',
+                    'JavaScript enabled',
+                    '8GB RAM recommended',
+                    'Basic quantum computing knowledge'
+                ],
+                projectFile: null,
+                liveDemo: false,
+                tags: ['quantum', 'simulation', 'research']
+            },
+            {
+                id: 'poly-math',
+                title: 'PolyMath Edu',
+                description: 'Adaptive learning platform using AI to personalize education for African students.',
+                status: 'release',
+                category: 'web',
+                testers: 1243,
+                feedback: 5678,
+                version: '2.1.4',
+                launchDate: '2024-04-10',
+                features: [
+                    'AI-powered tutoring',
+                    'Adaptive assessments',
+                    'Multi-language support',
+                    'Progress tracking',
+                    'Parent dashboard'
+                ],
+                requirements: [
+                    'Modern browser',
+                    'Email account',
+                    'Basic computer skills',
+                    'Microphone for voice features'
+                ],
+                projectFile: null,
+                liveDemo: false,
+                tags: ['education', 'ai', 'learning']
+            },
+            {
+                id: 'africa-pay',
+                title: 'AfricaPay',
+                description: 'Unified payment platform for seamless cross-border transactions across Africa.',
+                status: 'alpha',
+                category: 'mobile',
+                testers: 156,
+                feedback: 543,
+                version: '0.5.2',
+                launchDate: '2024-08-15',
+                features: [
+                    'Multi-currency support',
+                    'Instant transfers',
+                    'Bill payments',
+                    'Savings wallet',
+                    'Merchant services'
+                ],
+                requirements: [
+                    'Android 8+ or iOS 12+',
+                    'Valid phone number',
+                    'Government ID',
+                    'Bank account'
+                ],
+                projectFile: null,
+                liveDemo: false,
+                tags: ['finance', 'mobile', 'payments']
+            }
+        ];
+
+        // ===== DOM ELEMENTS =====
+        const elements = {
+            projectsGrid: document.getElementById('projectsGrid'),
+            notification: document.getElementById('notification'),
+            notificationTitle: document.getElementById('notificationTitle'),
+            notificationMessage: document.getElementById('notificationMessage'),
+            betaForm: document.getElementById('betaForm'),
+            applicationForm: document.getElementById('applicationForm'),
+            feedbackForm: document.getElementById('feedbackForm'),
+            projectModalContent: document.getElementById('projectModalContent')
+        };
+
+        // ===== INITIALIZE =====
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize projects
+            appState.projects = projectsData;
+            renderProjects();
+            
+            // Initialize stats counters
+            initializeCounters();
+            
+            // Setup filters
+            setupFilters();
+            
+            // Setup forms
+            setupForms();
+            
+            // Setup event listeners
+            setupEventListeners();
+            
+            // Check if user is returning from testing
+            checkReturnFromTesting();
+        });
+
+        // ===== ENHANCED PROJECT RENDERING =====
+        function renderProjects(filter = 'all') {
+            const grid = elements.projectsGrid;
+            grid.innerHTML = '';
+            
+            let filteredProjects = appState.projects;
+            
+            if (filter !== 'all') {
+                filteredProjects = appState.projects.filter(project => {
+                    if (filter === 'alpha' || filter === 'beta' || filter === 'release') {
+                        return project.status === filter;
+                    }
+                    return project.category === filter;
+                });
+            }
+            
+            if (filteredProjects.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+                        <i class="fas fa-flask" style="font-size: 4rem; color: var(--medium-gray); margin-bottom: 20px;"></i>
+                        <h3 style="color: var(--light); margin-bottom: 10px;">No Projects Found</h3>
+                        <p style="color: var(--medium-gray);">Check back soon for new beta projects in this category.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredProjects.forEach(project => {
+                const card = createProjectCard(project);
+                grid.appendChild(card);
+            });
+        }
+
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.dataset.id = project.id;
+            
+            const statusClass = `status-${project.status}`;
+            const statusText = project.status.charAt(0).toUpperCase() + project.status.slice(1);
+            
+            // Add live testing indicator class if project has live demo
+            const liveTestingClass = project.liveDemo ? 'live-testing' : '';
+            
+            card.innerHTML = `
+                <div class="project-header">
+                    <div class="project-status ${statusClass} ${liveTestingClass}">
+                        ${statusText} ${project.liveDemo ? '<i class="fas fa-bolt"></i>' : ''}
+                    </div>
+                    <h3>${project.title}</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-users"></i> ${project.testers} testers</span>
+                        <span><i class="fas fa-comments"></i> ${project.feedback} feedback</span>
+                        <span><i class="fas fa-code-branch"></i> v${project.version}</span>
+                    </div>
+                </div>
+                
+                <div class="project-content">
+                    <p class="project-description">${project.description}</p>
+                    
+                    <div class="project-features">
+                        <h4 style="color: var(--beta); margin-bottom: 10px; font-size: 0.9rem;">KEY FEATURES</h4>
+                        <ul>
+                            ${project.features.slice(0, 3).map(feature => `<li>${feature}</li>`).join('')}
+                            ${project.features.length > 3 ? '<li>And more...</li>' : ''}
+                        </ul>
+                    </div>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-value">${project.testers}</div>
+                            <div class="stat-label">Testers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${project.feedback}</div>
+                            <div class="stat-label">Feedback</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${project.version}</div>
+                            <div class="stat-label">Version</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-actions">
+                        <button class="btn btn-primary btn-sm w-100" onclick="viewProject('${project.id}')">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                        ${project.liveDemo ? 
+                            `<button class="btn btn-secondary btn-sm w-100" onclick="testProject('${project.id}')" style="background: var(--gradient-secondary);">
+                                <i class="fas fa-play-circle"></i> Live Test
+                            </button>` :
+                            `<button class="btn btn-outline btn-sm w-100" onclick="showNotification('Coming soon!', 'This project is not available for live testing yet.', 'info')">
+                                <i class="fas fa-clock"></i> Coming Soon
+                            </button>`
+                        }
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // ===== ENHANCED PROJECT VIEW =====
+        function viewProject(projectId) {
+            const project = appState.projects.find(p => p.id === projectId);
+            if (!project) return;
+            
+            appState.currentProject = project;
+            
+            const statusText = project.status.charAt(0).toUpperCase() + project.status.slice(1);
+            const launchDate = new Date(project.launchDate).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Create tags HTML
+            const tagsHtml = project.tags ? 
+                `<div style="margin: 15px 0;">
+                    ${project.tags.map(tag => 
+                        `<span style="display: inline-block; background: rgba(255, 107, 53, 0.1); 
+                          color: var(--beta-light); padding: 4px 12px; border-radius: 20px; 
+                          margin: 0 5px 5px 0; font-size: 0.8rem;">#${tag}</span>`
+                    ).join('')}
+                </div>` : '';
+            
+            elements.projectModalContent.innerHTML = `
+                <h2 class="modal-title">
+                    <i class="fas fa-flask"></i> ${project.title}
+                </h2>
+                
+                <div class="project-meta" style="margin-bottom: 20px;">
+                    <span class="beta-badge" style="margin-right: 15px;">
+                        <i class="fas fa-tag"></i> ${statusText}
+                    </span>
+                    <span style="color: var(--medium-gray);">
+                        <i class="fas fa-calendar-alt"></i> Target Launch: ${launchDate}
+                    </span>
+                </div>
+                
+                ${tagsHtml}
+                
+                <p style="color: var(--light-gray); margin-bottom: 25px; line-height: 1.6;">
+                    ${project.description}
+                </p>
+                
+                ${project.projectFile ? `
+                <div class="project-url">
+                    <strong><i class="fas fa-link"></i> Live Demo URL:</strong><br>
+                    <a href="${project.projectFile}" target="_blank">${project.projectFile}</a>
+                </div>
+                ` : ''}
+                
+                <div class="project-stats" style="margin: 25px 0;">
+                    <div class="stat">
+                        <div class="stat-value">${project.testers}</div>
+                        <div class="stat-label">Active Testers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">${project.feedback}</div>
+                        <div class="stat-label">Feedback Items</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">${project.version}</div>
+                        <div class="stat-label">Current Version</div>
+                    </div>
+                </div>
+                
+                <div class="project-features">
+                    <h4 style="color: var(--beta); margin-bottom: 15px;">Features</h4>
+                    <ul>
+                        ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                ${project.requirements ? `
+                <div class="requirements-list">
+                    <h4><i class="fas fa-check-circle"></i> Requirements</h4>
+                    <ul>
+                        ${project.requirements.map(req => `<li>${req}</li>`).join('')}
+                    </ul>
+                </div>
+                ` : ''}
+                
+                <div style="display: flex; gap: 15px; margin-top: 30px;">
+                    ${project.liveDemo ? 
+                        `<button class="btn btn-primary" style="flex: 1;" onclick="testProject('${project.id}')">
+                            <i class="fas fa-play-circle"></i> Start Live Testing
+                        </button>` :
+                        `<button class="btn btn-outline" style="flex: 1;" onclick="showNotification('Coming soon!', 'Live testing will be available soon.', 'info')">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </button>`
+                    }
+                    <button class="btn btn-secondary" style="flex: 1;" onclick="openFeedbackModal('${project.title}')">
+                        <i class="fas fa-comment-dots"></i> Submit Feedback
+                    </button>
+                </div>
+            `;
+            
+            openModal('projectModal');
+        }
+
+        // ===== NEW: LIVE TESTING FUNCTION =====
+        function testProject(projectId) {
+            const project = appState.projects.find(p => p.id === projectId);
+            if (!project || !project.projectFile) {
+                showNotification('Error', 'This project is not available for live testing yet.', 'error');
+                return;
+            }
+            
+            // Save current project for return tracking
+            localStorage.setItem('lastTestedProject', projectId);
+            localStorage.setItem('testStartTime', new Date().toISOString());
+            
+            // Show testing instructions
+            showNotification(
+                'Starting Live Test', 
+                `You are about to test ${project.title}. Please provide feedback when you're done.`, 
+                'info'
+            );
+            
+            // Open project in new tab after a short delay
+            setTimeout(() => {
+                window.open(project.projectFile, '_blank');
+            }, 1500);
+        }
+
+        // ===== NEW: CHECK RETURN FROM TESTING =====
+        function checkReturnFromTesting() {
+            const lastProjectId = localStorage.getItem('lastTestedProject');
+            const testStartTime = localStorage.getItem('testStartTime');
+            
+            if (lastProjectId && testStartTime) {
+                const startTime = new Date(testStartTime);
+                const now = new Date();
+                const minutesDiff = (now - startTime) / (1000 * 60);
+                
+                if (minutesDiff > 1) { // If user spent more than 1 minute testing
+                    const project = appState.projects.find(p => p.id === lastProjectId);
+                    if (project) {
+                        setTimeout(() => {
+                            showNotification(
+                                'Welcome Back!', 
+                                `How was your testing experience with ${project.title}? Consider submitting feedback.`, 
+                                'info',
+                                5000
+                            );
+                        }, 1000);
+                    }
+                }
+                
+                // Clear stored data
+                localStorage.removeItem('lastTestedProject');
+                localStorage.removeItem('testStartTime');
+            }
+        }
+
+        // ===== FILTERS =====
+        function setupFilters() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Filter projects
+                    const filter = btn.dataset.filter;
+                    renderProjects(filter);
+                });
+            });
+        }
+
+        // ===== MODAL FUNCTIONS =====
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openFeedbackModal(projectName) {
+            document.getElementById('feedbackProject').value = projectName;
+            closeModal('projectModal');
+            openModal('feedbackModal');
+        }
+
+        // ===== NOTIFICATION SYSTEM =====
+        function showNotification(title, message, type = 'success', duration = 3000) {
+            const notification = elements.notification;
+            const titleEl = elements.notificationTitle;
+            const messageEl = elements.notificationMessage;
+            
+            // Set notification type
+            notification.className = 'notification';
+            notification.classList.add(type);
+            
+            // Set content
+            titleEl.textContent = title;
+            messageEl.textContent = message;
+            
+            // Set icon based on type
+            const icon = notification.querySelector('.notification-icon i');
+            switch(type) {
+                case 'error':
+                    icon.className = 'fas fa-exclamation-circle';
+                    break;
+                case 'warning':
+                    icon.className = 'fas fa-exclamation-triangle';
+                    break;
+                case 'info':
+                    icon.className = 'fas fa-info-circle';
+                    break;
+                default:
+                    icon.className = 'fas fa-check-circle';
+            }
+            
+            // Show notification
+            notification.classList.add('show');
+            
+            // Auto hide after duration
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, duration);
+        }
+
+        // ===== FORM HANDLING =====
+        function setupForms() {
+            // Beta signup form
+            elements.betaForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('.cta-input').value;
+                
+                // Simulate form submission
+                showNotification('Success!', `Thank you for your interest! We've sent a confirmation to ${email}.`, 'success');
+                this.reset();
+                
+                // Update stats
+                appState.testers += 1;
+                updateStats();
+            });
+        }
+
+        function submitApplication() {
+            const form = document.getElementById('applicationForm');
+            if (!form.checkValidity()) {
+                showNotification('Error', 'Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            // Simulate submission
+            showNotification('Application Submitted!', 'Your beta tester application has been received. We\'ll contact you soon.', 'success');
+            closeModal('joinModal');
+            form.reset();
+            
+            // Update stats
+            appState.testers += 1;
+            updateStats();
+        }
+
+        function submitFeedback() {
+            const project = document.getElementById('feedbackProject').value;
+            const type = document.getElementById('feedbackType').value;
+            const title = document.getElementById('feedbackTitle').value;
+            const description = document.getElementById('feedbackDescription').value;
+            
+            if (!title || !description) {
+                showNotification('Error', 'Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            // Simulate submission
+            showNotification('Feedback Submitted!', `Thank you for your feedback on ${project}.`, 'success');
+            closeModal('feedbackModal');
+            document.getElementById('feedbackForm').reset();
+            
+            // Update project feedback count if we have current project
+            if (appState.currentProject) {
+                appState.currentProject.feedback += 1;
+                renderProjects();
+            }
+            
+            // Update stats
+            appState.featuresShaped += 1;
+            updateStats();
+        }
+
+        // ===== STATS COUNTERS =====
+        function initializeCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.floor(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        function updateStats() {
+            // Update the displayed stats
+            document.querySelectorAll('.stat-number[data-count]').forEach(stat => {
+                const statType = stat.closest('.stat-item').querySelector('.stat-label').textContent;
+                if (statType.includes('Testers')) {
+                    stat.setAttribute('data-count', appState.testers);
+                    stat.textContent = appState.testers;
+                } else if (statType.includes('Features')) {
+                    stat.setAttribute('data-count', appState.featuresShaped);
+                    stat.textContent = appState.featuresShaped;
+                }
+            });
+        }
+
+        // ===== EVENT LISTENERS =====
+        function setupEventListeners() {
+            // Close modals on background click
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeModal(this.id);
+                    }
+                });
+            });
+            
+            // Close notification on click
+            elements.notification.addEventListener('click', function() {
+                this.classList.remove('show');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // ===== WINDOW EVENTS =====
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = 'var(--shadow-lg)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    closeModal(modal.id);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
