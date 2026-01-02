@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     
+    <!-- Chart.js for Live Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -1284,6 +1287,140 @@
             border-color: white;
         }
         
+        /* ===== FLOATING BUTTONS ===== */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+        
+        .floating-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-secondary);
+            color: var(--dark);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-normal);
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .floating-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 180, 216, 0.4);
+        }
+        
+        .floating-btn .btn-text {
+            position: absolute;
+            right: 70px;
+            white-space: nowrap;
+            background: rgba(13, 27, 42, 0.9);
+            padding: 8px 15px;
+            border-radius: var(--radius-md);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+            color: white;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .floating-btn:hover .btn-text {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        
+        .chart-btn {
+            background: linear-gradient(135deg, #FF6B6B, #EE5A24);
+        }
+        
+        /* ===== CHART MODAL ===== */
+        .chart-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 27, 42, 0.95);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+        }
+        
+        .chart-modal.active {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+        }
+        
+        .chart-modal-content {
+            background: var(--dark-medium);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            max-width: 800px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            transform: translateY(20px);
+            transition: transform var(--transition-normal);
+        }
+        
+        .chart-modal.active .chart-modal-content {
+            transform: translateY(0);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color var(--transition-fast);
+            line-height: 1;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .close-modal:hover {
+            color: var(--secondary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 400px;
+            margin-top: var(--space-md);
+        }
+        
         /* ===== FOOTER ===== */
         .main-footer {
             background: var(--dark-medium);
@@ -1631,6 +1768,19 @@
             .nav-cta {
                 margin-top: var(--space-lg);
             }
+            
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .floating-btn .btn-text {
+                display: none;
+            }
+            
+            .floating-btn:hover .btn-text {
+                display: none;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1675,6 +1825,15 @@
             .newsletter-form {
                 flex-direction: column;
             }
+            
+            .chart-modal-content {
+                padding: var(--space-md);
+                width: 95%;
+            }
+            
+            .chart-container {
+                height: 300px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1714,6 +1873,20 @@
             
             .modal-content {
                 padding: var(--space-lg);
+            }
+            
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .chart-container {
+                height: 250px;
             }
         }
         
@@ -1828,7 +2001,7 @@
         /* Back to Top */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
+            bottom: 80px;
             right: 30px;
             width: 50px;
             height: 50px;
@@ -2579,6 +2752,41 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
+    <!-- Floating Button Group -->
+    <div class="floating-buttons">
+        <!-- Live Chart Button -->
+        <button class="floating-btn chart-btn" id="chartBtn">
+            <span class="btn-icon">📊</span>
+            <span class="btn-text">Live Chart</span>
+        </button>
+        
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/+237650990946?text=Hello%20S-Tech%20Digital%20Ink!%20I%20would%20like%20to%20learn%20more%20about%20your%20services." class="floating-btn whatsapp-btn" id="whatsappBtn" target="_blank">
+            <span class="btn-icon">💬</span>
+            <span class="btn-text">WhatsApp Chat</span>
+        </a>
+    </div>
+
+    <!-- Chart Modal -->
+    <div class="chart-modal" id="chartModal">
+        <div class="chart-modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <h2>Live Analytics Dashboard</h2>
+            <p>Real-time data visualization showing our impact metrics</p>
+            <div class="chart-container">
+                <canvas id="liveChart"></canvas>
+            </div>
+            <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <button class="btn btn-sm btn-primary" id="addData">
+                    <i class="fas fa-plus"></i> Add Random Data
+                </button>
+                <button class="btn btn-sm btn-secondary" id="resetData">
+                    <i class="fas fa-redo"></i> Reset Chart
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Payment Modal -->
     <div class="modal" id="paymentModal">
         <div class="modal-content">
@@ -2681,46 +2889,13 @@
             Notification message will appear here
         </div>
     </div>
-    <!-- Floating Button Group -->
-<div class="floating-buttons">
-    <!-- Live Chart Button -->
-    <button class="floating-btn chart-btn" id="chartBtn">
-        <span class="btn-icon">📊</span>
-        <span class="btn-text">Live Chart</span>
-    </button>
-    
-    <!-- WhatsApp Button -->
-    <a href="#" class="floating-btn whatsapp-btn" id="whatsappBtn">
-        <span class="btn-icon">💬</span>
-        <span class="btn-text">WhatsApp Chat</span>
-    </a>
-</div>
-
-<!-- Chart Modal -->
-<div class="chart-modal" id="chartModal">
-    <div class="chart-modal-content">
-        <button class="close-modal" id="closeModal">×</button>
-        <h2>Live Analytics Dashboard</h2>
-        <p>Real-time data visualization updated every 2 seconds</p>
-        <div class="chart-container">
-            <canvas id="liveChart"></canvas>
-        </div>
-        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-            <button class="floating-btn" id="addData" style="background-color: #34A853; padding: 8px 16px; font-size: 14px;">
-                Add Random Data
-            </button>
-            <button class="floating-btn" id="resetData" style="background-color: #EA4335; padding: 8px 16px; font-size: 14px;">
-                Reset Chart
-            </button>
-        </div>
-    </div>
-</div>
 
     <!-- JavaScript -->
     <script>
         // ===== GLOBAL VARIABLES =====
         let selectedDonationAmount = 50;
         let currentModal = null;
+        let liveChart = null;
         
         // ===== DOM CONTENT LOADED =====
         document.addEventListener('DOMContentLoaded', function() {
@@ -2731,6 +2906,8 @@
             initNewsletter();
             initBackToTop();
             initScrollAnimations();
+            initChartSystem();
+            initWhatsAppButton();
             
             // Hide preloader
             setTimeout(() => {
@@ -3219,6 +3396,253 @@
             });
         }
         
+        // ===== WHATSAPP FUNCTIONALITY =====
+        function initWhatsAppButton() {
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            if (whatsappBtn) {
+                // Already configured via href attribute in HTML
+                console.log('WhatsApp button initialized for +237650990946');
+            }
+        }
+        
+        // ===== LIVE CHART FUNCTIONALITY =====
+        function initChartSystem() {
+            const chartBtn = document.getElementById('chartBtn');
+            const chartModal = document.getElementById('chartModal');
+            const closeChartModal = document.getElementById('closeModal');
+            const addDataBtn = document.getElementById('addData');
+            const resetDataBtn = document.getElementById('resetData');
+            
+            // Open chart modal
+            if (chartBtn) {
+                chartBtn.addEventListener('click', () => {
+                    chartModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    currentModal = 'chartModal';
+                    
+                    // Initialize chart if not already initialized
+                    if (!liveChart) {
+                        initializeLiveChart();
+                    }
+                });
+            }
+            
+            // Close chart modal
+            if (closeChartModal) {
+                closeChartModal.addEventListener('click', () => {
+                    chartModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    currentModal = null;
+                });
+            }
+            
+            // Close chart modal on outside click
+            if (chartModal) {
+                chartModal.addEventListener('click', (e) => {
+                    if (e.target === chartModal) {
+                        chartModal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                        currentModal = null;
+                    }
+                });
+            }
+            
+            // Add random data button
+            if (addDataBtn) {
+                addDataBtn.addEventListener('click', addRandomData);
+            }
+            
+            // Reset chart button
+            if (resetDataBtn) {
+                resetDataBtn.addEventListener('click', resetChartData);
+            }
+        }
+        
+        function initializeLiveChart() {
+            const ctx = document.getElementById('liveChart').getContext('2d');
+            
+            // Initial data
+            const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+            const data = {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Website Visitors',
+                        data: [320, 450, 510, 620, 580, 720],
+                        borderColor: 'rgb(0, 180, 216)',
+                        backgroundColor: 'rgba(0, 180, 216, 0.2)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Projects Completed',
+                        data: [2, 4, 5, 7, 9, 12],
+                        borderColor: 'rgb(123, 44, 191)',
+                        backgroundColor: 'rgba(123, 44, 191, 0.2)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Team Members',
+                        data: [8, 12, 16, 18, 20, 24],
+                        borderColor: 'rgb(46, 204, 113)',
+                        backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                        tension: 0.4,
+                        fill: true
+                    }
+                ]
+            };
+            
+            // Chart configuration
+            const config = {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: 'rgba(255, 255, 255, 0.8)',
+                                font: {
+                                    family: "'Inter', sans-serif"
+                                }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(13, 27, 42, 0.9)',
+                            titleColor: 'rgb(0, 180, 216)',
+                            bodyColor: 'rgba(255, 255, 255, 0.8)',
+                            borderColor: 'rgba(0, 180, 216, 0.3)',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 0.7)'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 0.7)'
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeInOutQuart'
+                    }
+                }
+            };
+            
+            // Create chart
+            liveChart = new Chart(ctx, config);
+            
+            // Start live updates
+            startLiveUpdates();
+        }
+        
+        function startLiveUpdates() {
+            // Update chart every 2 seconds
+            setInterval(() => {
+                if (liveChart && liveChart.data && liveChart.data.datasets) {
+                    // Add new data point
+                    const newLabel = getNextMonth(liveChart.data.labels[liveChart.data.labels.length - 1]);
+                    liveChart.data.labels.push(newLabel);
+                    
+                    // Remove first label if we have more than 12 data points
+                    if (liveChart.data.labels.length > 12) {
+                        liveChart.data.labels.shift();
+                    }
+                    
+                    // Update each dataset with random but realistic growth
+                    liveChart.data.datasets.forEach((dataset, index) => {
+                        const lastValue = dataset.data[dataset.data.length - 1];
+                        let newValue;
+                        
+                        if (index === 0) { // Website Visitors
+                            newValue = Math.max(0, lastValue + Math.random() * 100 - 20);
+                        } else if (index === 1) { // Projects Completed
+                            newValue = Math.max(0, lastValue + Math.random() * 2 - 0.5);
+                        } else { // Team Members
+                            newValue = Math.max(0, lastValue + Math.random() * 2 - 0.5);
+                        }
+                        
+                        dataset.data.push(Math.round(newValue));
+                        
+                        // Remove first data point if we have more than 12
+                        if (dataset.data.length > 12) {
+                            dataset.data.shift();
+                        }
+                    });
+                    
+                    // Update chart
+                    liveChart.update('none');
+                }
+            }, 2000);
+        }
+        
+        function getNextMonth(currentMonth) {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const currentIndex = months.indexOf(currentMonth);
+            return months[(currentIndex + 1) % 12];
+        }
+        
+        function addRandomData() {
+            if (liveChart && liveChart.data && liveChart.data.datasets) {
+                const newLabel = getNextMonth(liveChart.data.labels[liveChart.data.labels.length - 1]);
+                liveChart.data.labels.push(newLabel);
+                
+                liveChart.data.datasets.forEach((dataset, index) => {
+                    const lastValue = dataset.data[dataset.data.length - 1];
+                    let newValue;
+                    
+                    if (index === 0) { // Website Visitors
+                        newValue = lastValue + Math.random() * 200 + 50;
+                    } else if (index === 1) { // Projects Completed
+                        newValue = lastValue + Math.random() * 3 + 1;
+                    } else { // Team Members
+                        newValue = lastValue + Math.random() * 2 + 1;
+                    }
+                    
+                    dataset.data.push(Math.round(newValue));
+                });
+                
+                // Remove excess data
+                if (liveChart.data.labels.length > 12) {
+                    liveChart.data.labels.shift();
+                    liveChart.data.datasets.forEach(dataset => {
+                        dataset.data.shift();
+                    });
+                }
+                
+                liveChart.update();
+                showNotification('New data point added to chart!', 'info');
+            }
+        }
+        
+        function resetChartData() {
+            if (liveChart) {
+                // Reset to initial data
+                liveChart.data.labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+                liveChart.data.datasets[0].data = [320, 450, 510, 620, 580, 720];
+                liveChart.data.datasets[1].data = [2, 4, 5, 7, 9, 12];
+                liveChart.data.datasets[2].data = [8, 12, 16, 18, 20, 24];
+                
+                liveChart.update();
+                showNotification('Chart data has been reset to initial values.', 'info');
+            }
+        }
+        
         // ===== ADDITIONAL ANIMATIONS =====
         // Glitch effect on logo
         const logo = document.querySelector('.logo');
@@ -3253,9 +3677,7 @@
                 icon.style.transform = 'rotate(0deg)';
             });
         });
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
+        
         // ===== REAL-TIME UPDATES =====
         // Update announcement periodically
         const announcements = [
@@ -3263,7 +3685,9 @@
             "🌟 Partnership Announcement: S-Tech Digital Ink partners with DreamHost for enhanced web infrastructure",
             "⚡ Limited spots available for our volunteer program - Apply today!",
             "🎉 We've impacted 500+ people through our digital initiatives",
-            "📢 ANTIC Certification achieved - Setting new standards for digital excellence in Cameroon"
+            "📢 ANTIC Certification achieved - Setting new standards for digital excellence in Cameroon",
+            "💡 New AI-powered solutions launching next month - Stay tuned!",
+            "🌍 Expanding operations to 2 more African countries this quarter"
         ];
         
         let currentAnnouncement = 0;
@@ -3287,10 +3711,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
