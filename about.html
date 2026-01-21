@@ -3,23 +3,27 @@
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1176385262946045" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>About Us | S-Tech Digital Ink | Digitally Rewriting Africa's Future</title>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Learn about S-Tech Digital Ink - Cameroon's premier digital innovation startup. Our mission, vision, and journey of transforming Africa through technology.">
     <meta name="keywords" content="about S-Tech Digital Ink, Cameroon tech startup, digital transformation Africa, technology innovation, our mission, our vision">
     <meta name="author" content="S-Tech Digital Ink">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About S-Tech Digital Ink | Digitally Rewriting Africa's Future">
+    <meta property="og:description" content="Pioneering digital transformation in Cameroon and beyond since 2023">
+    <meta property="og:type" content="website">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     
     <!-- LiveChat Integration -->
-    <!-- Start of LiveChat (www.livechat.com) code -->
     <script>
         window.__lc = window.__lc || {};
         window.__lc.license = 19461508;
@@ -28,10 +32,9 @@
         ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
     </script>
     <noscript><a href="https://www.livechat.com/chat-with/19461508/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-    <!-- End of LiveChat code -->
     
     <style>
-        /* ===== CSS VARIABLES ===== */
+        /* ===== CSS VARIABLES & RESET ===== */
         :root {
             /* Professional Color Palette */
             --primary-dark: #0a2540;
@@ -55,6 +58,7 @@
             --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
             --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
             --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--dark-medium) 100%);
             
             /* Fonts */
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -63,12 +67,28 @@
             /* Spacing */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
-            --space-md: 2rem;
-            --space-lg: 3rem;
-            --space-xl: 5rem;
+            --space-md: 1.5rem;
+            --space-lg: 2.5rem;
+            --space-xl: 4rem;
+            --space-xxl: 6rem;
+            
+            /* Borders */
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+            --border-radius-xl: 32px;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.25);
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
         }
         
-        /* ===== RESET & BASE STYLES ===== */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -78,6 +98,8 @@
         html {
             font-size: 16px;
             scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
         }
         
         body {
@@ -86,6 +108,9 @@
             color: var(--light);
             line-height: 1.7;
             min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         /* Background Pattern */
@@ -99,11 +124,29 @@
             background-image: 
                 radial-gradient(circle at 15% 50%, rgba(26, 54, 93, 0.1) 0%, transparent 25%),
                 radial-gradient(circle at 85% 30%, rgba(0, 102, 204, 0.05) 0%, transparent 25%);
-            z-index: -1;
+            z-index: -2;
             pointer-events: none;
         }
         
-        /* ===== LAYOUT ===== */
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-light);
+        }
+        
+        /* ===== CONTAINER SYSTEM ===== */
         .container {
             width: 100%;
             max-width: 1200px;
@@ -111,21 +154,66 @@
             padding: 0 var(--space-md);
         }
         
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1320px;
+            }
+        }
+        
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-secondary);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        p {
+            margin-bottom: var(--space-sm);
+            font-size: clamp(1rem, 2vw, 1.125rem);
+        }
+        
+        .lead {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
         /* ===== HEADER ===== */
         .main-header {
-            background: rgba(13, 27, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(13, 27, 42, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: all var(--transition-normal);
+        }
+        
+        .main-header.scrolled {
+            background: rgba(13, 27, 42, 0.95);
+            box-shadow: var(--shadow-lg);
         }
         
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem var(--space-md);
+            padding: var(--space-sm) 0;
+            min-height: 80px;
         }
         
         .logo {
@@ -133,19 +221,25 @@
             align-items: center;
             gap: var(--space-sm);
             text-decoration: none;
+            transition: transform var(--transition-fast);
+        }
+        
+        .logo:hover {
+            transform: scale(1.02);
         }
         
         .logo-icon {
-            width: 48px;
-            height: 48px;
+            width: 56px;
+            height: 56px;
             background: var(--gradient-secondary);
-            border-radius: 12px;
+            border-radius: var(--border-radius);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 800;
             color: var(--dark);
+            flex-shrink: 0;
         }
         
         .logo-text {
@@ -155,19 +249,21 @@
         
         .logo-main {
             font-family: var(--font-secondary);
-            font-size: 1.8rem;
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
             font-weight: 800;
             color: white;
             line-height: 1;
+            letter-spacing: -0.5px;
         }
         
         .logo-tagline {
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 1.5vw, 0.85rem);
             color: var(--secondary-light);
             font-weight: 500;
+            letter-spacing: 0.5px;
         }
         
-        /* Navigation */
+        /* ===== NAVIGATION ===== */
         .nav-menu {
             display: flex;
             align-items: center;
@@ -176,16 +272,19 @@
         
         .nav-links {
             display: flex;
-            gap: var(--space-md);
+            gap: clamp(var(--space-md), 3vw, var(--space-lg));
             list-style: none;
         }
         
         .nav-link {
             color: var(--light);
             text-decoration: none;
-            font-weight: 500;
-            padding: 8px 0;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+            padding: var(--space-xs) 0;
             position: relative;
+            transition: color var(--transition-fast);
+            white-space: nowrap;
         }
         
         .nav-link::after {
@@ -196,122 +295,252 @@
             width: 0;
             height: 2px;
             background: var(--gradient-secondary);
-            transition: width 0.3s ease;
+            transition: width var(--transition-normal);
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-light);
         }
         
         .nav-link:hover::after {
             width: 100%;
         }
         
-        .current-page {
+        .nav-link.current-page {
             color: var(--secondary-light);
         }
         
-        .current-page::after {
+        .nav-link.current-page::after {
             width: 100%;
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.75rem;
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            border-radius: var(--border-radius);
+            transition: all var(--transition-fast);
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .mobile-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-toggle.active {
+            transform: rotate(90deg);
         }
         
         /* ===== HERO SECTION ===== */
         .page-hero {
-            background: var(--gradient-primary);
-            padding: var(--space-xl) 0;
+            background: var(--gradient-dark);
+            position: relative;
+            overflow: hidden;
+            padding: var(--space-xxl) 0;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 102, 204, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 168, 107, 0.15) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
             text-align: center;
         }
         
         .page-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: var(--space-sm);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: var(--space-md);
             background: linear-gradient(135deg, #fff 0%, var(--secondary-light) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.1;
         }
         
         .hero-subtitle {
-            font-size: 1.25rem;
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
             color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            font-weight: 400;
         }
         
         /* ===== CONTENT SECTIONS ===== */
         .content-section {
             padding: var(--space-xl) 0;
+            position: relative;
+        }
+        
+        .content-section:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
         }
         
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: var(--space-lg);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--space-xl);
             color: var(--secondary-light);
+            position: relative;
+            display: inline-block;
         }
         
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-secondary);
+            border-radius: 2px;
+        }
+        
+        /* ===== GRID SYSTEM ===== */
         .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
             gap: var(--space-lg);
-            margin-top: var(--space-xl);
+            margin-top: var(--space-lg);
         }
         
+        /* ===== CARDS ===== */
         .about-card {
             background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
+            border-radius: var(--border-radius-lg);
             padding: var(--space-lg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
         
         .about-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-xl);
+            background: rgba(255, 255, 255, 0.05);
         }
         
         .card-icon {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             background: var(--gradient-secondary);
-            border-radius: 16px;
+            border-radius: var(--border-radius);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--dark);
             margin-bottom: var(--space-md);
+            flex-shrink: 0;
         }
         
+        .about-card h3 {
+            margin-bottom: var(--space-sm);
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+        }
+        
+        .about-card p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Mission Section */
         .mission-section {
-            background: var(--dark-medium);
-            border-radius: 24px;
+            background: var(--gradient-dark);
+            border-radius: var(--border-radius-xl);
             padding: var(--space-xl);
             margin: var(--space-xl) 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-secondary);
         }
         
         /* ===== STATS SECTION ===== */
         .stats-section {
             background: var(--gradient-secondary);
-            border-radius: 24px;
+            border-radius: var(--border-radius-xl);
             padding: var(--space-xl);
             margin: var(--space-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+        }
+        
+        .stats-section h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            position: relative;
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
             gap: var(--space-lg);
             text-align: center;
+            position: relative;
+        }
+        
+        .stat-item {
+            padding: var(--space-md);
         }
         
         .stat-number {
-            font-size: 3rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 800;
             color: white;
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--space-xs);
+            font-family: var(--font-secondary);
         }
         
         .stat-label {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 1.5vw, 1.125rem);
             color: rgba(255, 255, 255, 0.9);
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: 600;
         }
         
         /* ===== FOOTER ===== */
@@ -324,11 +553,21 @@
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-xl);
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+            gap: clamp(var(--space-lg), 4vw, var(--space-xl));
+        }
+        
+        .footer-logo .logo {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
         }
         
         .footer-links h4 {
+            font-size: 1.25rem;
             margin-bottom: var(--space-md);
             color: var(--secondary-light);
         }
@@ -338,17 +577,34 @@
         }
         
         .footer-links li {
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--space-xs);
         }
         
         .footer-links a {
-            color: var(--light-gray);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .footer-links a:hover {
             color: var(--secondary-light);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer-contact i {
+            color: var(--secondary-light);
+            width: 20px;
         }
         
         .footer-bottom {
@@ -356,38 +612,41 @@
             padding-top: var(--space-lg);
             margin-top: var(--space-lg);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--medium-gray);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
         }
         
         /* ===== COMMUNICATION BUTTONS ===== */
         .com-buttons {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: clamp(20px, 4vw, 30px);
+            right: clamp(20px, 4vw, 30px);
             display: flex;
             flex-direction: column;
             gap: 15px;
-            z-index: 1000;
+            z-index: 999;
         }
         
         .com-btn {
-            width: 60px;
-            height: 60px;
+            width: clamp(56px, 8vw, 64px);
+            height: clamp(56px, 8vw, 64px);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-decoration: none;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-normal);
             position: relative;
+            border: none;
+            cursor: pointer;
         }
         
         .com-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: var(--shadow-xl);
         }
         
         .whatsapp-btn {
@@ -396,8 +655,6 @@
         
         .livechat-btn {
             background: linear-gradient(135deg, #00A4FF, #0066CC);
-            cursor: pointer;
-            border: none;
         }
         
         .btn-tooltip {
@@ -405,15 +662,16 @@
             right: 70px;
             background: rgba(13, 27, 42, 0.95);
             color: white;
-            padding: 8px 15px;
+            padding: 10px 15px;
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             white-space: nowrap;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease;
+            transition: all var(--transition-normal);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: none;
         }
         
         .com-btn:hover .btn-tooltip {
@@ -422,19 +680,35 @@
             right: 75px;
         }
         
-        /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 992px) {
+        /* ===== RESPONSIVE BREAKPOINTS ===== */
+        
+        /* Tablet and below */
+        @media (max-width: 991px) {
+            .header-container {
+                padding: var(--space-sm) var(--space-md);
+            }
+            
+            .mobile-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
             .nav-menu {
                 position: fixed;
-                top: 80px;
+                top: 0;
                 right: -100%;
-                width: 300px;
-                height: calc(100vh - 80px);
-                background: var(--dark-medium);
+                width: 100%;
+                max-width: 400px;
+                height: 100vh;
+                background: var(--dark);
                 flex-direction: column;
                 padding: var(--space-xl);
-                transition: right 0.3s ease;
-                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+                transition: right var(--transition-normal);
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+                overflow-y: auto;
+                z-index: 1000;
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
             }
             
             .nav-menu.active {
@@ -444,45 +718,92 @@
             .nav-links {
                 flex-direction: column;
                 gap: var(--space-md);
+                width: 100%;
             }
             
-            .mobile-toggle {
+            .nav-link {
+                font-size: 1.125rem;
+                padding: var(--space-sm) 0;
+                width: 100%;
                 display: block;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
             }
             
-            .com-buttons {
-                bottom: 20px;
-                right: 20px;
+            .page-hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            .mission-section,
+            .stats-section {
+                padding: var(--space-lg);
+                border-radius: var(--border-radius-lg);
+            }
+            
+            .content-section {
+                padding: var(--space-lg) 0;
             }
         }
         
-        @media (max-width: 768px) {
-            .page-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
+        /* Mobile */
+        @media (max-width: 767px) {
+            :root {
+                --space-xl: 3rem;
+                --space-lg: 2rem;
             }
             
             .container {
                 padding: 0 var(--space-sm);
             }
             
-            .com-buttons {
-                bottom: 15px;
-                right: 15px;
+            .header-container {
+                min-height: 70px;
             }
             
-            .com-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
+            .logo-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 1.5rem;
+            }
+            
+            .nav-menu {
+                padding: var(--space-lg) var(--space-md);
+            }
+            
+            .page-hero {
+                padding: var(--space-lg) 0;
+                margin-bottom: var(--space-lg);
+            }
+            
+            .mission-section,
+            .stats-section {
+                padding: var(--space-md);
+                border-radius: var(--border-radius);
+            }
+            
+            .about-card {
+                padding: var(--space-md);
+            }
+            
+            .card-icon {
+                width: 64px;
+                height: 64px;
+                font-size: 1.75rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+            
+            .footer-links {
+                margin-bottom: var(--space-md);
+            }
+            
+            .com-buttons {
+                flex-direction: row;
+                bottom: clamp(15px, 3vw, 20px);
+                right: 50%;
+                transform: translateX(50%);
+                gap: 20px;
             }
             
             .btn-tooltip {
@@ -490,22 +811,116 @@
             }
         }
         
-        @media (max-width: 576px) {
+        /* Small Mobile */
+        @media (max-width: 480px) {
+            :root {
+                --space-xl: 2.5rem;
+                --space-lg: 1.5rem;
+                --space-md: 1rem;
+            }
+            
+            .logo {
+                gap: var(--space-xs);
+            }
+            
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+            
+            .logo-main {
+                font-size: 1.125rem;
+            }
+            
+            .logo-tagline {
+                font-size: 0.7rem;
+            }
+            
             .page-hero h1 {
                 font-size: 2rem;
             }
             
             .hero-subtitle {
-                font-size: 1rem;
+                font-size: 1.125rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .stat-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-md);
             }
             
             .about-grid {
                 grid-template-columns: 1fr;
+                gap: var(--space-md);
             }
             
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-md);
+            .com-btn {
+                width: 52px;
+                height: 52px;
+                font-size: 1.25rem;
+            }
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .nav-link:hover::after {
+                width: 0;
+            }
+            
+            .nav-link.current-page::after {
+                width: 100%;
+            }
+            
+            .about-card:hover {
+                transform: none;
+                border-color: rgba(255, 255, 255, 0.08);
+            }
+            
+            .com-btn:hover {
+                transform: none;
+            }
+            
+            .btn-tooltip {
+                display: none;
+            }
+        }
+        
+        /* High-resolution screens */
+        @media (min-resolution: 192dpi) {
+            body {
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .main-header,
+            .com-buttons,
+            .mobile-toggle,
+            .nav-menu,
+            .footer-bottom {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .page-hero {
+                background: none;
+                color: black;
+            }
+            
+            .page-hero h1 {
+                background: none;
+                -webkit-text-fill-color: black;
+                color: black;
             }
         }
     </style>
@@ -522,11 +937,11 @@
                 </div>
             </a>
             
-            <button class="mobile-toggle" id="mobileToggle">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
             
-            <nav class="nav-menu" id="navMenu">
+            <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link current-page">About</a></li>
@@ -541,26 +956,28 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="page-hero">
+    <section class="page-hero" aria-label="About page hero">
         <div class="container">
-            <h1>About S-Tech Digital Ink</h1>
-            <p class="hero-subtitle">Pioneering digital transformation in Cameroon and beyond since 2023</p>
+            <h1 class="animate__animated animate__fadeInDown">About S-Tech Digital Ink</h1>
+            <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                Pioneering digital transformation in Cameroon and beyond since 2023
+            </p>
         </div>
     </section>
 
     <!-- Main Content -->
     <main class="container">
         <!-- Our Story -->
-        <section class="content-section">
-            <h2 class="section-title">Our Story</h2>
-            <p>Founded in 2023, S-Tech Digital Ink emerged from a vision to bridge the digital divide in Africa. Based in Buea, Cameroon, we're at the forefront of the continent's digital revolution.</p>
+        <section class="content-section animate__animated animate__fadeIn" aria-labelledby="our-story">
+            <h2 class="section-title" id="our-story">Our Story</h2>
+            <p class="lead">Founded in 2023, S-Tech Digital Ink emerged from a vision to bridge the digital divide in Africa. Based in Buea, Cameroon, we're at the forefront of the continent's digital revolution.</p>
             
             <p>Our mission is to empower communities, businesses, and governments through innovative digital solutions that are accessible, scalable, and sustainable. We believe that technology should be a tool for positive change, and we're committed to making that a reality across Africa.</p>
             
             <div class="about-grid">
                 <div class="about-card">
                     <div class="card-icon">
-                        <i class="fas fa-bullseye"></i>
+                        <i class="fas fa-bullseye" aria-hidden="true"></i>
                     </div>
                     <h3>Our Vision</h3>
                     <p>To become Africa's leading digital innovation hub by 2030, transforming how communities access and utilize technology for sustainable development.</p>
@@ -568,7 +985,7 @@
                 
                 <div class="about-card">
                     <div class="card-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
                     </div>
                     <h3>Our Mission</h3>
                     <p>Democratize access to digital tools and knowledge across Africa, empowering individuals and organizations to thrive in the digital economy.</p>
@@ -576,7 +993,7 @@
                 
                 <div class="about-card">
                     <div class="card-icon">
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <h3>Our Values</h3>
                     <p>Innovation, Integrity, Inclusivity, and Impact - the four pillars that guide every decision we make and every solution we create.</p>
@@ -585,60 +1002,60 @@
         </section>
 
         <!-- Mission & Vision Details -->
-        <section class="mission-section">
-            <h2 class="section-title">Our Commitment to Africa</h2>
-            <p>We're not just building technology - we're building futures. Our work focuses on creating sustainable digital ecosystems that empower local communities while maintaining global standards of excellence.</p>
+        <section class="mission-section animate__animated animate__fadeIn" aria-labelledby="our-commitment">
+            <h2 class="section-title" id="our-commitment">Our Commitment to Africa</h2>
+            <p class="lead">We're not just building technology - we're building futures. Our work focuses on creating sustainable digital ecosystems that empower local communities while maintaining global standards of excellence.</p>
             
-            <div class="about-grid mt-4">
+            <div class="about-grid">
                 <div class="about-card">
-                    <h3>🌍 Local Focus, Global Standards</h3>
+                    <h3><span aria-hidden="true">🌍</span> Local Focus, Global Standards</h3>
                     <p>While our roots are in Cameroon, our solutions meet international standards of quality, security, and innovation.</p>
                 </div>
                 
                 <div class="about-card">
-                    <h3>💡 Innovation with Purpose</h3>
+                    <h3><span aria-hidden="true">💡</span> Innovation with Purpose</h3>
                     <p>Every project we undertake serves a clear purpose: to solve real problems and create tangible value for our communities.</p>
                 </div>
                 
                 <div class="about-card">
-                    <h3>🤝 Community-Driven Development</h3>
+                    <h3><span aria-hidden="true">🤝</span> Community-Driven Development</h3>
                     <p>We work with local communities to understand their needs and co-create solutions that truly make a difference.</p>
                 </div>
             </div>
         </section>
 
         <!-- Our Impact Stats -->
-        <section class="stats-section">
-            <h2 style="color: white; text-align: center; margin-bottom: var(--space-xl);">Our Impact in Numbers</h2>
+        <section class="stats-section animate__animated animate__fadeIn" aria-labelledby="our-impact">
+            <h2 id="our-impact">Our Impact in Numbers</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">24+</div>
+                    <div class="stat-number" data-count="24">0</div>
                     <div class="stat-label">Team Members</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">15+</div>
+                    <div class="stat-number" data-count="15">0</div>
                     <div class="stat-label">Active Projects</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">3+</div>
+                    <div class="stat-number" data-count="3">0</div>
                     <div class="stat-label">Countries</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">500+</div>
+                    <div class="stat-number" data-count="500">0</div>
                     <div class="stat-label">People Impacted</div>
                 </div>
             </div>
         </section>
 
         <!-- Our Approach -->
-        <section class="content-section">
-            <h2 class="section-title">Our Approach</h2>
-            <p>We combine cutting-edge technology with deep local understanding to create solutions that are both innovative and practical.</p>
+        <section class="content-section animate__animated animate__fadeIn" aria-labelledby="our-approach">
+            <h2 class="section-title" id="our-approach">Our Approach</h2>
+            <p class="lead">We combine cutting-edge technology with deep local understanding to create solutions that are both innovative and practical.</p>
             
-            <div class="about-grid mt-4">
+            <div class="about-grid">
                 <div class="about-card">
                     <div class="card-icon">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
                     <h3>Research & Discovery</h3>
                     <p>Understanding local challenges through extensive research and community engagement before developing solutions.</p>
@@ -646,7 +1063,7 @@
                 
                 <div class="about-card">
                     <div class="card-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-code" aria-hidden="true"></i>
                     </div>
                     <h3>Solution Development</h3>
                     <p>Building scalable, secure, and user-friendly digital solutions using the latest technologies and best practices.</p>
@@ -654,7 +1071,7 @@
                 
                 <div class="about-card">
                     <div class="card-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
                     </div>
                     <h3>Impact Measurement</h3>
                     <p>Tracking and analyzing the real-world impact of our solutions to ensure continuous improvement and maximum value.</p>
@@ -663,23 +1080,23 @@
         </section>
 
         <!-- Location -->
-        <section class="mission-section">
-            <h2 class="section-title">Based in Cameroon, Serving Africa</h2>
-            <p>Headquartered in Buea, Cameroon, we're strategically positioned to understand and address the unique digital challenges facing African communities. Our location allows us to:</p>
+        <section class="mission-section animate__animated animate__fadeIn" aria-labelledby="our-location">
+            <h2 class="section-title" id="our-location">Based in Cameroon, Serving Africa</h2>
+            <p class="lead">Headquartered in Buea, Cameroon, we're strategically positioned to understand and address the unique digital challenges facing African communities.</p>
             
-            <div class="about-grid mt-4">
+            <div class="about-grid">
                 <div class="about-card">
-                    <h3>📍 Local Understanding</h3>
+                    <h3><span aria-hidden="true">📍</span> Local Understanding</h3>
                     <p>Deep understanding of African markets, cultures, and technological infrastructure.</p>
                 </div>
                 
                 <div class="about-card">
-                    <h3>🌐 Regional Expertise</h3>
+                    <h3><span aria-hidden="true">🌐</span> Regional Expertise</h3>
                     <p>Experience working across multiple African countries and understanding regional differences.</p>
                 </div>
                 
                 <div class="about-card">
-                    <h3>🚀 Growth Potential</h3>
+                    <h3><span aria-hidden="true">🚀</span> Growth Potential</h3>
                     <p>Positioned in one of Africa's fastest-growing tech hubs with access to emerging talent and opportunities.</p>
                 </div>
             </div>
@@ -687,7 +1104,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer" aria-label="Footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -698,79 +1115,109 @@
                             <div class="logo-tagline">Digitally Rewriting The Future</div>
                         </div>
                     </a>
-                    <p style="margin-top: var(--space-sm);">Leading digital innovation in Cameroon and transforming Africa through technology.</p>
+                    <p>Leading digital innovation in Cameroon and transforming Africa through technology.</p>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="participate.html">Get Involved</a></li>
+                        <li><a href="index.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Services</a></li>
+                        <li><a href="team.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Our Team</a></li>
+                        <li><a href="participate.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Get Involved</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="participate.html#donate">Donate</a></li>
-                        <li><a href="participate.html#volunteer">Volunteer</a></li>
-                        <li><a href="participate.html#partner">Partner With Us</a></li>
+                        <li><a href="partners.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Partners</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contact</a></li>
+                        <li><a href="participate.html#donate"><i class="fas fa-chevron-right" aria-hidden="true"></i> Donate</a></li>
+                        <li><a href="participate.html#volunteer"><i class="fas fa-chevron-right" aria-hidden="true"></i> Volunteer</a></li>
+                        <li><a href="participate.html#partner"><i class="fas fa-chevron-right" aria-hidden="true"></i> Partner With Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Buea, Cameroon</p>
-                    <p><i class="fas fa-envelope"></i> sekaalvin6@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +237 650-990-946</p>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Buea, Cameroon</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> sekaalvin6@gmail.com</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +237 650-990-946</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 S-Tech Digital Ink. All rights reserved. | Digitally Rewriting Africa's Future</p>
+                <p>&copy; <span id="currentYear">2024</span> S-Tech Digital Ink. All rights reserved. | Digitally Rewriting Africa's Future</p>
             </div>
         </div>
     </footer>
 
     <!-- Communication Buttons -->
     <div class="com-buttons">
-        <button class="com-btn livechat-btn" id="livechatBtn">
-            <i class="fas fa-comment"></i>
+        <button class="com-btn livechat-btn" id="livechatBtn" aria-label="Open Live Chat">
+            <i class="fas fa-comment" aria-hidden="true"></i>
             <span class="btn-tooltip">Live Chat Support</span>
         </button>
         
         <a href="https://wa.me/+237650990946?text=Hello%20S-Tech%20Digital%20Ink!%20I%20would%20like%20to%20learn%20more%20about%20your%20company." 
            class="com-btn whatsapp-btn" 
-           target="_blank">
-            <i class="fab fa-whatsapp"></i>
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
             <span class="btn-tooltip">WhatsApp Chat</span>
         </a>
     </div>
 
     <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
         // Mobile Navigation Toggle
-        document.getElementById('mobileToggle').addEventListener('click', function() {
-            const navMenu = document.getElementById('navMenu');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            this.classList.toggle('active');
+            this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
             this.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+                ? '<i class="fas fa-times" aria-hidden="true"></i>' 
+                : '<i class="fas fa-bars" aria-hidden="true"></i>';
         });
 
         // Close mobile menu when clicking links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                const navMenu = document.getElementById('navMenu');
                 if (navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
-                    document.getElementById('mobileToggle').innerHTML = '<i class="fas fa-bars"></i>';
+                    mobileToggle.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', false);
+                    mobileToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
                 }
             });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', false);
+                mobileToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+            }
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('.main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
 
         // LiveChat Button
@@ -782,25 +1229,83 @@
             }
         });
 
-        // Stats Counter Animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const stats = document.querySelectorAll('.stat-number');
-            stats.forEach(stat => {
-                const target = parseInt(stat.textContent);
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                let current = 0;
-                
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        clearInterval(timer);
-                        current = target;
-                    }
-                    stat.textContent = Math.floor(current) + '+';
-                }, 16);
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
             });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.about-card, .content-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
         });
+
+        // Enhanced Stats Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000;
+            const startTime = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smooth animation
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const currentValue = Math.floor(easeOut * target);
+                
+                element.textContent = currentValue + (element.textContent.includes('+') ? '+' : '');
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        }
+
+        // Initialize counters when in view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(animateCounter);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Touch device detection
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            document.body.classList.add('touch-device');
+        }
+
+        // Prevent zoom on double-tap (mobile)
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
     </script>
 </body>
 </html>
