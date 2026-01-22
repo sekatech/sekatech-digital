@@ -29,16 +29,36 @@
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     
     <!-- LiveChat Integration -->
-    <!-- Start of LiveChat (www.livechat.com) code -->
     <script>
         window.__lc = window.__lc || {};
         window.__lc.license = 19461508;
         window.__lc.integration_name = "manual_onboarding";
         window.__lc.product_name = "livechat";
-        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+        window.__lc.chat_between_groups = false;
+        window.__lc.params = [
+            { name: 'Company', value: 'S-Tech Digital Ink' },
+            { name: 'Website', value: 'stechdigitalink.com' }
+        ];
+        
+        // Initialize LiveChat
+        (function() {
+            var lc = document.createElement('script');
+            lc.type = 'text/javascript';
+            lc.async = true;
+            lc.src = 'https://cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(lc, s);
+        })();
+        
+        // LiveChat custom configuration
+        window.LiveChatWidget || (window.LiveChatWidget = {});
+        window.LiveChatWidget._chatBetweenGroups = false;
+        window.LiveChatWidget._customerDetails = {
+            name: 'Website Visitor',
+            email: '',
+            company: 'S-Tech Digital Ink User'
+        };
     </script>
-    <noscript><a href="https://www.livechat.com/chat-with/19461508/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-    <!-- End of LiveChat code -->
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -204,27 +224,27 @@
         }
         
         h1 {
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
             font-weight: 900;
             letter-spacing: -0.02em;
         }
         
         h2 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 4vw, 3rem);
             letter-spacing: -0.01em;
         }
         
         h3 {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
         }
         
         h4 {
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
         }
         
         p {
             margin-bottom: var(--space-sm);
-            font-size: 1.125rem;
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
             color: var(--light-gray);
         }
         
@@ -260,17 +280,17 @@
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 var(--space-md);
+            padding: 0 clamp(1rem, 3vw, 2rem);
         }
         
         .section {
-            padding: var(--space-xxl) 0;
+            padding: clamp(3rem, 8vw, 8rem) 0;
             position: relative;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: var(--space-xl);
+            margin-bottom: clamp(2rem, 5vw, 5rem);
             position: relative;
         }
         
@@ -293,7 +313,7 @@
         }
         
         .section-subtitle {
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
             color: var(--medium-gray);
             max-width: 700px;
             margin: 0 auto;
@@ -365,7 +385,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: var(--space-sm) var(--space-md);
+            padding: var(--space-sm) clamp(1rem, 3vw, 2rem);
         }
         
         .logo {
@@ -377,14 +397,14 @@
         }
         
         .logo-icon {
-            width: 48px;
-            height: 48px;
+            width: clamp(40px, 8vw, 48px);
+            height: clamp(40px, 8vw, 48px);
             background: var(--gradient-secondary);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
             font-weight: 800;
             color: var(--dark);
             position: relative;
@@ -419,141 +439,29 @@
         
         .logo-main {
             font-family: var(--font-secondary);
-            font-size: 1.8rem;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
             font-weight: 800;
             color: white;
             line-height: 1;
         }
         
         .logo-tagline {
-            font-size: 0.8rem;
+            font-size: clamp(0.6rem, 1vw, 0.8rem);
             color: var(--secondary-light);
             font-weight: 500;
             letter-spacing: 1px;
-        }
-        
-        /* Search Engine */
-        .search-container {
-            position: relative;
-            max-width: 400px;
-            width: 100%;
-            margin: 0 var(--space-md);
-        }
-        
-        .search-box {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-full);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            transition: all var(--transition-normal);
-        }
-        
-        .search-box:focus-within {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--secondary);
-            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
-        }
-        
-        .search-input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            color: var(--light);
-            font-family: var(--font-primary);
-            font-size: 1rem;
-            padding: 0 10px;
-            outline: none;
-        }
-        
-        .search-input::placeholder {
-            color: var(--medium-gray);
-        }
-        
-        .search-button {
-            background: var(--gradient-secondary);
-            border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dark);
-            cursor: pointer;
-            transition: all var(--transition-normal);
-        }
-        
-        .search-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
-        }
-        
-        .search-results {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--dark-medium);
-            border-radius: var(--radius-md);
-            margin-top: 10px;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            max-height: 400px;
-            overflow-y: auto;
-            display: none;
-            z-index: 1000;
-        }
-        
-        .search-results.active {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .search-result-item {
-            padding: 15px 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            cursor: pointer;
-            transition: background var(--transition-fast);
-        }
-        
-        .search-result-item:hover {
-            background: rgba(0, 102, 204, 0.1);
-        }
-        
-        .search-result-item h4 {
-            margin-bottom: 5px;
-            color: var(--light);
-        }
-        
-        .search-result-item p {
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            margin-bottom: 0;
-        }
-        
-        .no-results {
-            padding: 20px;
-            text-align: center;
-            color: var(--medium-gray);
         }
         
         /* Navigation */
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: var(--space-lg);
+            gap: clamp(1rem, 2vw, 3rem);
         }
         
         .nav-links {
             display: flex;
-            gap: var(--space-md);
+            gap: clamp(1rem, 2vw, 2rem);
             list-style: none;
         }
         
@@ -609,7 +517,7 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 14px 32px;
+            padding: clamp(12px, 2vw, 14px) clamp(20px, 3vw, 32px);
             font-family: var(--font-secondary);
             font-weight: 600;
             font-size: 1rem;
@@ -730,10 +638,11 @@
         .cookies-content h3 {
             margin-bottom: var(--space-sm);
             color: var(--secondary-light);
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
         }
         
         .cookies-content p {
-            font-size: 0.95rem;
+            font-size: clamp(0.9rem, 1.5vw, 0.95rem);
             color: var(--light-gray);
             margin-bottom: var(--space-md);
         }
@@ -747,6 +656,19 @@
         .cookies-actions .btn {
             flex: 1;
             min-width: 120px;
+        }
+        
+        .privacy-message {
+            background: rgba(0, 102, 204, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--space-md);
+        }
+        
+        .privacy-message i {
+            color: var(--secondary);
+            margin-right: 8px;
         }
         
         /* ===== HERO SECTION ===== */
@@ -784,37 +706,41 @@
         }
         
         .hero-title {
-            font-size: 4.5rem;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
             margin-bottom: var(--space-md);
             line-height: 1.1;
         }
         
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
             color: var(--light-gray);
-            margin-bottom: var(--space-xl);
+            margin-bottom: clamp(2rem, 4vw, 5rem);
             max-width: 600px;
         }
         
         .hero-buttons {
             display: flex;
             gap: var(--space-md);
-            margin-bottom: var(--space-xl);
+            margin-bottom: clamp(2rem, 4vw, 5rem);
+            flex-wrap: wrap;
         }
         
         .hero-stats {
-            display: flex;
-            gap: var(--space-xl);
-            margin-top: var(--space-xl);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: clamp(1rem, 3vw, 3rem);
+            margin-top: clamp(2rem, 4vw, 5rem);
         }
         
         .stat-item {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         
         .stat-number {
-            font-size: 3rem;
+            font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 800;
             background: var(--gradient-secondary);
             -webkit-background-clip: text;
@@ -824,7 +750,7 @@
         }
         
         .stat-label {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
             color: var(--medium-gray);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -888,9 +814,15 @@
         
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: var(--space-xl);
             align-items: center;
+        }
+        
+        @media (min-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+            }
         }
         
         .about-image {
@@ -898,6 +830,13 @@
             border-radius: var(--radius-xl);
             overflow: hidden;
             box-shadow: var(--shadow-xl);
+            order: 2;
+        }
+        
+        @media (min-width: 992px) {
+            .about-image {
+                order: 1;
+            }
         }
         
         .about-img {
@@ -923,15 +862,31 @@
             mix-blend-mode: overlay;
         }
         
+        .about-text {
+            order: 1;
+        }
+        
+        @media (min-width: 992px) {
+            .about-text {
+                order: 2;
+            }
+        }
+        
         .about-text h2 {
             margin-bottom: var(--space-md);
         }
         
         .about-features {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
             gap: var(--space-md);
             margin-top: var(--space-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .about-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         .feature-item {
@@ -956,7 +911,7 @@
         /* ===== SERVICES SECTION ===== */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
             gap: var(--space-lg);
         }
         
@@ -1017,7 +972,7 @@
         
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
             gap: var(--space-lg);
         }
         
@@ -1094,7 +1049,7 @@
         /* ===== PROJECTS SECTION ===== */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
             gap: var(--space-lg);
         }
         
@@ -1137,6 +1092,8 @@
             justify-content: space-between;
             align-items: center;
             margin-top: var(--space-md);
+            flex-wrap: wrap;
+            gap: 10px;
         }
         
         .project-status {
@@ -1154,7 +1111,7 @@
         /* ===== PARTICIPATION SECTION ===== */
         .participation-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
             gap: var(--space-lg);
         }
         
@@ -1257,9 +1214,15 @@
         
         .form-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: var(--space-md);
             margin-bottom: var(--space-md);
+        }
+        
+        @media (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
         }
         
         .form-group {
@@ -1299,7 +1262,7 @@
         
         .partners-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
             gap: var(--space-lg);
         }
         
@@ -1344,7 +1307,7 @@
         /* ===== NEWS SECTION ===== */
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
             gap: var(--space-lg);
         }
         
@@ -1427,7 +1390,14 @@
             max-width: 500px;
             margin: var(--space-lg) auto 0;
             display: flex;
+            flex-direction: column;
             gap: var(--space-sm);
+        }
+        
+        @media (min-width: 768px) {
+            .newsletter-form {
+                flex-direction: row;
+            }
         }
         
         .newsletter-input {
@@ -1466,8 +1436,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 60px;
-            height: 60px;
+            width: clamp(50px, 10vw, 60px);
+            height: clamp(50px, 10vw, 60px);
             border-radius: 50%;
             background: var(--gradient-secondary);
             color: var(--dark);
@@ -1523,7 +1493,7 @@
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
             gap: var(--space-xl);
             margin-bottom: var(--space-xl);
         }
@@ -1686,63 +1656,6 @@
             }
         }
         
-        /* Glitch Effect */
-        .glitch {
-            position: relative;
-        }
-        
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .glitch::before {
-            left: 2px;
-            text-shadow: -2px 0 var(--accent);
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
-        }
-        
-        .glitch::after {
-            left: -2px;
-            text-shadow: -2px 0 var(--secondary);
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-        }
-        
-        @keyframes glitch-anim {
-            0% { clip: rect(31px, 9999px, 94px, 0); }
-            10% { clip: rect(112px, 9999px, 76px, 0); }
-            20% { clip: rect(85px, 9999px, 77px, 0); }
-            30% { clip: rect(27px, 9999px, 97px, 0); }
-            40% { clip: rect(64px, 9999px, 98px, 0); }
-            50% { clip: rect(61px, 9999px, 85px, 0); }
-            60% { clip: rect(99px, 9999px, 114px, 0); }
-            70% { clip: rect(34px, 9999px, 115px, 0); }
-            80% { clip: rect(98px, 9999px, 129px, 0); }
-            90% { clip: rect(43px, 9999px, 96px, 0); }
-            100% { clip: rect(82px, 9999px, 64px, 0); }
-        }
-        
-        @keyframes glitch-anim2 {
-            0% { clip: rect(65px, 9999px, 119px, 0); }
-            10% { clip: rect(79px, 9999px, 66px, 0); }
-            20% { clip: rect(93px, 9999px, 105px, 0); }
-            30% { clip: rect(58px, 9999px, 98px, 0); }
-            40% { clip: rect(82px, 9999px, 102px, 0); }
-            50% { clip: rect(33px, 9999px, 67px, 0); }
-            60% { clip: rect(104px, 9999px, 47px, 0); }
-            70% { clip: rect(89px, 9999px, 96px, 0); }
-            80% { clip: rect(37px, 9999px, 117px, 0); }
-            90% { clip: rect(87px, 9999px, 82px, 0); }
-            100% { clip: rect(52px, 9999px, 60px, 0); }
-        }
-        
         /* ===== MODAL ===== */
         .modal {
             position: fixed;
@@ -1770,7 +1683,7 @@
         .modal-content {
             background: var(--dark-medium);
             border-radius: var(--radius-xl);
-            padding: var(--space-xl);
+            padding: clamp(1.5rem, 3vw, 2rem);
             max-width: 500px;
             width: 90%;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1778,6 +1691,8 @@
             position: relative;
             transform: translateY(20px);
             transition: transform var(--transition-normal);
+            max-height: 90vh;
+            overflow-y: auto;
         }
         
         .modal.active .modal-content {
@@ -1802,37 +1717,16 @@
         
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
-            h1 {
-                font-size: 3.5rem;
+            .nav-menu {
+                gap: 1.5rem;
             }
             
-            h2 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-title {
-                font-size: 3.5rem;
-            }
-            
-            .search-container {
-                max-width: 300px;
+            .nav-links {
+                gap: 1.5rem;
             }
         }
         
         @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                max-width: 600px;
-                margin: 0 auto;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
             .nav-menu {
                 position: fixed;
                 top: 0;
@@ -1841,11 +1735,13 @@
                 height: 100vh;
                 background: var(--dark-medium);
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
+                padding-top: 100px;
                 align-items: center;
                 transition: right var(--transition-normal);
                 box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
                 z-index: 1001;
+                overflow-y: auto;
             }
             
             .nav-menu.active {
@@ -1856,25 +1752,23 @@
                 flex-direction: column;
                 text-align: center;
                 gap: var(--space-lg);
-            }
-            
-            .mobile-toggle {
-                display: block;
+                width: 100%;
+                padding: 0 var(--space-md);
             }
             
             .nav-cta {
                 margin-top: var(--space-lg);
-            }
-            
-            .search-container {
-                display: none;
-            }
-            
-            .mobile-search {
-                display: block;
-                margin: var(--space-md) 0;
+                padding: 0 var(--space-md);
                 width: 100%;
-                max-width: 100%;
+            }
+            
+            .nav-cta .btn {
+                width: 100%;
+                margin-left: 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
             }
             
             .floating-buttons {
@@ -1895,49 +1789,33 @@
                 right: 10px;
                 bottom: 10px;
             }
-        }
-        
-        @media (max-width: 768px) {
-            html {
-                font-size: 14px;
-            }
-            
-            .section {
-                padding: var(--space-xl) 0;
-            }
-            
-            h1 {
-                font-size: 2.8rem;
-            }
-            
-            h2 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-title {
-                font-size: 2.8rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
             
             .hero-buttons {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: stretch;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: clamp(2rem, 6vw, 4rem) 0;
+            }
+            
+            .hero-section {
+                padding-top: 100px;
             }
             
             .hero-stats {
-                flex-direction: column;
-                gap: var(--space-lg);
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .about-features {
                 grid-template-columns: 1fr;
-            }
-            
-            .newsletter-form {
-                flex-direction: column;
             }
             
             .cookies-actions {
@@ -1947,36 +1825,10 @@
             .cookies-actions .btn {
                 width: 100%;
             }
-        }
-        
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 var(--space-sm);
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .hero-title {
-                font-size: 2.2rem;
-            }
-            
-            .section-header h2::after {
-                width: 60px;
-            }
-            
-            .btn {
-                padding: 12px 24px;
-            }
             
             .donation-options {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
             }
             
             .donation-amount {
@@ -1984,8 +1836,22 @@
                 text-align: center;
             }
             
-            .modal-content {
-                padding: var(--space-lg);
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .section-header h2::after {
+                width: 60px;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
             }
             
             .floating-buttons {
@@ -1996,6 +1862,72 @@
             .floating-btn {
                 width: 50px;
                 height: 50px;
+            }
+            
+            .cookies-consent {
+                max-width: calc(100% - 20px);
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+                width: 95%;
+            }
+            
+            .participation-card {
+                padding: 1.5rem;
+            }
+            
+            .service-card, .team-member, .project-card, .news-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Mobile-specific improvements */
+        @media (max-width: 480px) {
+            .logo-text {
+                max-width: 150px;
+            }
+            
+            .logo-main {
+                font-size: 1.2rem;
+            }
+            
+            .logo-tagline {
+                font-size: 0.7rem;
+            }
+            
+            .nav-menu {
+                width: 100%;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .service-card:hover,
+            .team-member:hover,
+            .project-card:hover,
+            .news-card:hover {
+                transform: none;
+            }
+            
+            .nav-link:hover::after {
+                width: 0;
+            }
+            
+            .btn:hover {
+                transform: none;
+            }
+            
+            .floating-btn:hover {
+                transform: none;
             }
         }
         
@@ -2088,7 +2020,7 @@
             transform: translateX(150%);
             transition: transform var(--transition-normal);
             z-index: 1000;
-            max-width: 350px;
+            max-width: calc(100% - 40px);
         }
         
         .notification.show {
@@ -2172,8 +2104,12 @@
     <!-- Cookies Consent -->
     <div class="cookies-consent" id="cookiesConsent">
         <div class="cookies-content">
-            <h3>🍪 We Value Your Privacy</h3>
-            <p>Hello there! We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. Some cookies are essential for the site to work properly. By continuing to use our site, you're agreeing to our use of cookies. We care about your privacy and only use cookies to make your experience better.</p>
+            <div class="privacy-message">
+                <i class="fas fa-shield-alt"></i>
+                <strong>S-Tech Cares About Your Privacy</strong>
+            </div>
+            <h3>🍪 Cookie Preferences</h3>
+            <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. Some cookies are essential for the site to work properly. By continuing to use our site, you're agreeing to our use of cookies. Your privacy is important to us, and we only use cookies to make your experience better.</p>
             <div class="cookies-actions">
                 <button class="btn btn-primary" id="acceptCookies">
                     <i class="fas fa-check"></i> Accept All
@@ -2211,38 +2147,17 @@
                 </div>
             </a>
             
-            <!-- Search Container for Desktop 
-            <div class="search-container d-none d-md-block">
-                <div class="search-box">
-                    <input type="text" class="search-input" placeholder="Search services, projects, or news..." id="searchInput">
-                    <button class="search-button" id="searchButton">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-                <div class="search-results" id="searchResults"></div>
-            </div>-->
-            
             <button class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
             </button>
             
             <nav class="nav-menu" id="navMenu">
-                <!-- Search Container for Mobile
-                <div class="search-container mobile-search d-md-none">
-                    <div class="search-box">
-                        <input type="text" class="search-input" placeholder="Search...">
-                        <button class="search-button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>-->
-                
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#team" class="nav-link">Team</a></li>
-                    <li><a href="betaprojects.html" class="nav-link">BETA Projects</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#participate" class="nav-link">Participate</a></li>
                     <li><a href="#partners" class="nav-link">Partners</a></li>
                 </ul>
@@ -2902,7 +2817,7 @@
     <!-- Floating Button Group -->
     <div class="floating-buttons">
         <!-- LiveChat Button -->
-        <button class="floating-btn livechat-btn" id="livechatBtn">
+        <button class="floating-btn livechat-btn" id="livechatBtn" onclick="window.LiveChatWidget.call('maximize')">
             <span class="btn-icon">💬</span>
             <span class="btn-text">Live Chat</span>
         </button>
@@ -3024,70 +2939,6 @@
         let currentModal = null;
         let cookiesAccepted = false;
         
-        // Search data
-        const searchData = [
-            {
-                title: "Web Development Services",
-                description: "Custom websites and web applications built with modern technologies",
-                category: "services",
-                url: "#services"
-            },
-            {
-                title: "Mobile Applications",
-                description: "Native and cross-platform mobile apps for iOS and Android",
-                category: "services",
-                url: "#services"
-            },
-            {
-                title: "AI & Machine Learning",
-                description: "Intelligent solutions powered by artificial intelligence",
-                category: "services",
-                url: "#services"
-            },
-            {
-                title: "Digital Literacy Program",
-                description: "Training 1000+ youths across Cameroon in digital skills",
-                category: "projects",
-                url: "#projects"
-            },
-            {
-                title: "POLYMATH EDUCATION NETWORK",
-                description: "Online learning platform for quality education access",
-                category: "projects",
-                url: "#projects"
-            },
-            {
-                title: "BUILDORA Social Platform",
-                description: "Connecting workers with employers across Africa",
-                category: "projects",
-                url: "#projects"
-            },
-            {
-                title: "S-Tech Team Members",
-                description: "Meet our talented team driving digital innovation",
-                category: "team",
-                url: "#team"
-            },
-            {
-                title: "Volunteer Opportunities",
-                description: "Join our movement and share your skills",
-                category: "participate",
-                url: "#participate"
-            },
-            {
-                title: "Partnership Inquiries",
-                description: "Collaborate with us to amplify impact",
-                category: "participate",
-                url: "#participate"
-            },
-            {
-                title: "Donation Options",
-                description: "Support our mission to rewrite Africa's digital future",
-                category: "donate",
-                url: "#donate"
-            }
-        ];
-        
         // ===== DOM CONTENT LOADED =====
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize components
@@ -3098,9 +2949,7 @@
             initBackToTop();
             initScrollAnimations();
             initWhatsAppButton();
-            initSearchSystem();
             initCookiesConsent();
-            initLiveChatButton();
             
             // Check if cookies were previously accepted
             if (localStorage.getItem('cookiesAccepted') === 'true') {
@@ -3120,6 +2969,9 @@
                     document.getElementById('preloader').style.display = 'none';
                 }, 500);
             }, 1000);
+            
+            // Check LiveChat availability
+            checkLiveChatAvailability();
         });
         
         // ===== NAVIGATION =====
@@ -3161,12 +3013,13 @@
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
                     e.preventDefault();
                     
                     const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
                     const targetElement = document.querySelector(targetId);
+                    
                     if (targetElement) {
                         const headerHeight = document.querySelector('.main-header').offsetHeight;
                         const announcementHeight = document.querySelector('.announcement-bar').offsetHeight;
@@ -3185,10 +3038,6 @@
         function initAnimations() {
             // Hero animations
             const heroTitle = document.querySelector('.hero-title');
-            const heroSubtitle = document.querySelector('.hero-subtitle');
-            const heroButtons = document.querySelector('.hero-buttons');
-            const heroStats = document.querySelector('.hero-stats');
-            
             if (heroTitle) {
                 heroTitle.style.animation = 'none';
                 setTimeout(() => {
@@ -3215,7 +3064,8 @@
             });
             
             // Add hover effects to cards
-            document.querySelectorAll('.service-card, .team-member, .project-card, .news-card').forEach(card => {
+            const cards = document.querySelectorAll('.service-card, .team-member, .project-card, .news-card');
+            cards.forEach(card => {
                 card.addEventListener('mouseenter', () => {
                     card.style.transform = 'translateY(-10px)';
                 });
@@ -3226,100 +3076,21 @@
             });
         }
         
-        // ===== SEARCH SYSTEM =====
-        function initSearchSystem() {
-            const searchInput = document.getElementById('searchInput');
-            const searchButton = document.getElementById('searchButton');
-            const searchResults = document.getElementById('searchResults');
-            
-            if (!searchInput || !searchButton || !searchResults) return;
-            
-            // Search on input
-            searchInput.addEventListener('input', function() {
-                const query = this.value.toLowerCase().trim();
-                
-                if (query.length < 2) {
-                    searchResults.classList.remove('active');
-                    return;
-                }
-                
-                // Filter search data
-                const filteredResults = searchData.filter(item => 
-                    item.title.toLowerCase().includes(query) || 
-                    item.description.toLowerCase().includes(query) ||
-                    item.category.toLowerCase().includes(query)
-                );
-                
-                // Display results
-                displaySearchResults(filteredResults, query);
-            });
-            
-            // Search on button click
-            searchButton.addEventListener('click', function() {
-                const query = searchInput.value.toLowerCase().trim();
-                
-                if (query.length < 1) {
-                    searchInput.focus();
-                    return;
-                }
-                
-                // Filter search data
-                const filteredResults = searchData.filter(item => 
-                    item.title.toLowerCase().includes(query) || 
-                    item.description.toLowerCase().includes(query) ||
-                    item.category.toLowerCase().includes(query)
-                );
-                
-                // Display results
-                displaySearchResults(filteredResults, query);
-            });
-            
-            // Close search results when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!searchResults.contains(e.target) && e.target !== searchInput && e.target !== searchButton) {
-                    searchResults.classList.remove('active');
-                }
-            });
-            
-            // Function to display search results
-            function displaySearchResults(results, query) {
-                if (results.length === 0) {
-                    searchResults.innerHTML = `
-                        <div class="no-results">
-                            <p>No results found for "<strong>${query}</strong>"</p>
-                            <p class="text-small">Try searching for: services, projects, team, or donate</p>
-                        </div>
-                    `;
+        // ===== LIVECHAT AVAILABILITY CHECK =====
+        function checkLiveChatAvailability() {
+            // Check if LiveChat is loaded and available
+            setTimeout(() => {
+                if (typeof window.LiveChatWidget === 'undefined') {
+                    console.warn('LiveChat widget not loaded');
+                    // You could add a fallback chat option here
                 } else {
-                    searchResults.innerHTML = '';
-                    results.forEach(result => {
-                        const resultElement = document.createElement('div');
-                        resultElement.className = 'search-result-item';
-                        resultElement.innerHTML = `
-                            <h4>${result.title}</h4>
-                            <p>${result.description}</p>
-                            <span class="text-small">${result.category}</span>
-                        `;
-                        
-                        resultElement.addEventListener('click', function() {
-                            window.location.href = result.url;
-                            searchResults.classList.remove('active');
-                            searchInput.value = '';
-                        });
-                        
-                        searchResults.appendChild(resultElement);
+                    console.log('LiveChat is ready');
+                    // Configure LiveChat settings
+                    window.LiveChatWidget.on('ready', function() {
+                        console.log('LiveChat is ready to use');
                     });
                 }
-                
-                searchResults.classList.add('active');
-            }
-            
-            // Search on Enter key
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    searchButton.click();
-                }
-            });
+            }, 3000);
         }
         
         // ===== COOKIES CONSENT =====
@@ -3345,7 +3116,7 @@
                 cookiesConsent.classList.remove('active');
                 
                 // Show notification
-                showNotification('🍪 Thank you for accepting cookies! Your preferences have been saved.', 'success');
+                showNotification('🍪 Thank you for accepting cookies! S-Tech cares about your privacy.', 'success');
                 
                 // Track analytics (simulated)
                 if (cookiesAccepted) {
@@ -3367,7 +3138,7 @@
                 cookiesConsent.classList.remove('active');
                 
                 // Show notification
-                showNotification('🍪 Essential cookies only accepted. Thank you!', 'info');
+                showNotification('🍪 Essential cookies only accepted. Thank you! S-Tech values your privacy.', 'info');
             });
             
             // Customize cookies
@@ -3382,22 +3153,6 @@
                 if (preferences.analytics) {
                     console.log('Analytics cookies are enabled');
                 }
-            }
-        }
-        
-        // ===== LIVECHAT BUTTON =====
-        function initLiveChatButton() {
-            const livechatBtn = document.getElementById('livechatBtn');
-            
-            if (livechatBtn) {
-                livechatBtn.addEventListener('click', function() {
-                    // Trigger LiveChat widget
-                    if (window.LiveChatWidget) {
-                        window.LiveChatWidget.call('maximize');
-                    } else {
-                        showNotification('LiveChat is loading. Please try again in a moment.', 'info');
-                    }
-                });
             }
         }
         
@@ -3795,41 +3550,6 @@
             }
         }
         
-        // ===== ADDITIONAL ANIMATIONS =====
-        // Glitch effect on logo
-        const logo = document.querySelector('.logo');
-        if (logo) {
-            logo.addEventListener('mouseenter', () => {
-                logo.classList.add('glitch');
-                setTimeout(() => {
-                    logo.classList.remove('glitch');
-                }, 500);
-            });
-        }
-        
-        // Pulse effect on CTA buttons
-        setInterval(() => {
-            const ctaButtons = document.querySelectorAll('.btn-primary');
-            ctaButtons.forEach(btn => {
-                btn.classList.add('pulse');
-                setTimeout(() => {
-                    btn.classList.remove('pulse');
-                }, 2000);
-            });
-        }, 10000);
-        
-        // Rotate service icons on hover
-        document.querySelectorAll('.service-icon').forEach(icon => {
-            icon.addEventListener('mouseenter', () => {
-                icon.style.transform = 'rotate(360deg)';
-                icon.style.transition = 'transform 0.6s ease';
-            });
-            
-            icon.addEventListener('mouseleave', () => {
-                icon.style.transform = 'rotate(0deg)';
-            });
-        });
-        
         // ===== REAL-TIME UPDATES =====
         // Update announcement periodically
         const announcements = [
@@ -3878,23 +3598,6 @@
             }
         });
         
-        // Keyboard shortcuts
-        document.addEventListener('keydown', function(e) {
-            // Ctrl/Cmd + K for search
-            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-                e.preventDefault();
-                const searchInput = document.getElementById('searchInput');
-                if (searchInput) {
-                    searchInput.focus();
-                }
-            }
-            
-            // Escape to close modals
-            if (e.key === 'Escape' && currentModal) {
-                closeModal(currentModal);
-            }
-        });
-        
         // Add copy email functionality
         document.querySelectorAll('.fa-envelope').forEach(icon => {
             icon.addEventListener('click', function(e) {
@@ -3907,10 +3610,24 @@
                 });
             });
         });
+        
+        // ===== TOUCH DEVICE OPTIMIZATIONS =====
+        // Prevent zoom on double-tap
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Prevent pull-to-refresh on mobile
+        document.addEventListener('touchmove', function(event) {
+            if (event.scale !== 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
     </script>
 </body>
 </html>
-
-
-
-
